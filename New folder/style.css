@@ -1,0 +1,30 @@
+.section{
+    width: 90%;
+    margin: 50px;
+}
+
+.card{
+    float: left;
+    width: 18%;
+    box-shadow: 0 0 10px gray;
+     margin: 2%;
+     position: relative;
+     
+}
+.card img{
+ 
+    width: 100%;
+}
+.text, h2, h5 {
+    display: inline-block;
+
+}
+h5,p{ 
+color: lightgrey;
+
+}
+.text{
+background-color:rgba(237, 235, 235, 0.217) ;
+    padding: 15px;
+}
+
