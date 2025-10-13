@@ -1,0 +1,125 @@
+.background{
+background-image:url(./Image\ Placeholder.jpg) ;
+height: 100vh;
+width: 100%;
+}
+.navbar ,h2,.ul,li{
+
+    display: inline-block;
+
+    
+}
+  li{
+ display: inline-block;
+text-decoration: none;
+padding: 50px;
+}
+.container,h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: azure;
+    background-color:transparent;
+    
+}
+.navbar{
+    margin-left: 20%;
+}
+a{
+    color: azure;
+font-size: larger;
+text-decoration: none;
+}
+.btn {
+border-radius: 150px;
+background-color:rgb(67, 218, 150);
+padding: 15px;
+color: white;
+font-family: 'Times New Roman', Times, serif;
+border-color: rgb(67, 218, 150);
+}
+button{
+    color:rgb(67, 218, 150) ;
+    padding: 15px;
+    border-radius: 150px ;
+    border-color: white;
+
+}
+h1{
+    font-weight: 500;
+    text-align: center;
+    font-size: 120px;
+    
+}
+p{
+
+    text-align: center;
+}
+.btn-containe{
+    text-align: center;
+    justify-content: center;
+}
+.mission-vision {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  width: 80%;
+  margin: auto;
+  padding: 60px 0;
+}
+
+.text-content {
+  flex: 1;
+}
+
+.text-content h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.text-content h2 span {
+  color: #1ca677;
+}
+
+.text-content p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.card .icon {
+  font-size: 22px;
+  color: #1ca677;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.card h3 span {
+  color: #1ca677;
+}
+
+.image-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image-content img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+}
