@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Paws n' Play Hero</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="site-header py-3 px-4 position-absolute top-0 start-0 end-0">
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center text-white fw-bold fs-5">
+        <i class="fa-solid fa-paw me-2"></i> Paws n' Play
+      </div>
+
+      <nav class="d-none d-md-block">
+        <ul class="list-unstyled d-flex gap-4 mb-0 text-white fw-medium">
+          <li><a href="#" class="text-white text-decoration-none">Shop</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Services</a></li>
+          <li><a href="#" class="text-white text-decoration-none">About Us</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Blog</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="#" class="btn btn-light rounded-pill fw-semibold px-3 py-1">Get Started</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section d-flex align-items-center text-white">
+    <div class="container position-relative">
+      <div class="row">
+        <div class="col-lg-6 col-md-8">
+          <h1 class="fw-bold mb-3">
+            Pawsitively Perfect:<br>Where Every Pet's Dream Comes True!
+          </h1>
+          <p class="mb-4">
+            Welcome to Paws n' Play, the ultimate destination for pet lovers!
+            Explore a world of tail-wagging joy and furry companionship with our wide range of products and services.
+          </p>
+          <a href="#" class="btn btn-outline-light rounded-pill px-4 py-2 fw-semibold">
+             Shop Now<i class="fa-solid fa-paw me-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured-section py-5">
+  <div class="container">
+    <div class="card inner-card p-4 border-0">
+      <div class="d-flex align-items-center justify-content-between mb-3">
+        <h2 class="section-title mb-0">Featured Products</h2>
+
+        <form class="d-none d-md-flex align-items-center ms-3 search-wrap">
+          <div class="input-group">
+            <input type="search" class="form-control search-input" placeholder="Search" aria-label="Search">
+          </div>
+        </form>
+      </div>
+
+      <!-- Tabs / filters -->
+      <div class="d-flex flex-column flex-md-row align-items-center align-items-md-center justify-content-between ">
+        <ul class="nav nav-pills gap-3 mb-3 mb-md-0" role="tablist">
+          <li class="nav-item">
+            <button class="nav-link active pill-btn   " aria-current="page">Random</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link pill-btn">Cat</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link pill-btn">Dogs</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link pill-btn">Fish</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link pill-btn">Birds</button>
+          </li>
+        </ul>
+
+        <!-- search for mobile -->
+        <form class="d-md-none w-100 mt-2">
+          <div class="input-group">
+            <input type="search" class="form-control search-input" placeholder="Search" aria-label="Search">
+          </div>
+        </form>
+      </div>
+
+      <!-- products row -->
+      <div class="row mt-4 gx-4 gy-4 align-items-stretch">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="product-card h-100 d-flex align-items-center justify-content-center">
+            <img src="./img/2.jpg" alt="Cat Food" class="product-img">
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="product-card h-100 d-flex align-items-center justify-content-center">
+            <img src="./img/3.jpg" alt="Dog Food Box" class="product-img">
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="product-card h-100 d-flex align-items-center justify-content-center">
+            <img src="./img/4.jpg" alt="Dog Food" class="product-img">
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-end mt-3">
+        <a class="view-more" href="#">View More &gt;&gt;&gt;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="about-section">
+  <div class="container">
+    <h3 class="about-title">
+      <span class="paw-icon">🐾</span> About Us
+    </h3>
+
+    <div class="about-card">
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            At Paws n' Play, our journey began with a simple yet profound love for animals.
+            Inspired by the unwavering companionship and joy they bring to our lives, we embarked
+            on a mission to create a haven where pets and their owners alike could experience
+            unparalleled happiness and care.
+          </p>
+
+          <p>
+            Driven by our passion for animal welfare, we hand-select each product and service
+            with meticulous attention to quality and sustainability. From nutritious food and
+            enriching toys to expert grooming and healthcare, every offering is carefully curated
+            to meet the unique needs of our beloved furry friends.
+          </p>
+<p>
+            Driven by our passion for animal welfare, we hand-select each product and service
+            with meticulous attention to quality and sustainability. From nutritious food and
+            enriching toys to expert grooming and healthcare, every offering is carefully curated
+            to meet the unique needs of our beloved furry friends.
+          </p>
+          <p>
+            Join us in our mission to create a world where every pet is cherished, every need is
+            met, and every tail wags with happiness.
+          </p>
+        </div>
+
+        <div class="about-images">
+          <img src="./img/1.jpg" alt="Cat main" class="main-img">
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="blogs container d-flex flex-wrap align-items-center justify-content-center py-5">
+  <div class=" w-100 mb-2">
+    <nav class="navbar d-inline-block">
+      <a class="navbar-brand fw-bold fs-4" href="#">
+        <i class="fa-solid fa-paw me-2 text-dark"></i>
+        Blogs
+      </a>
+    </nav>
+  </div>
+
+  <div class="row  w-150">
+    <div class="col-md-6 mb-5">
+      <h2 class="fw-bold mb-5">Milestone: 20,000 Pets Treated</h2>
+      <p class="text-body-secondary">
+        Eget quis mi enim, leo lacinia pharetra, semper. Eget in volutpat mollis
+        at volutpat lectus velit, sed auctor. Porttitor fames arcu quis fusce
+        augue enim. Quis at habitant diam at. Suscipit tristique risus, at donec.
+      </p>
+      <h2 class="fw-bold mb-3">Renewed target</h2>
+
+      <p class="text-body-secondary">
+        Pharetra morbi libero id aliquam elit massa integer tellus. Quis felis
+        aliquam ullamcorper porttitor. Pulvinar ullamcorper sit dictumst ut eget a,
+        elementum eu. Maecenas est morbi mattis id in ac.
+      </p>
+      <p class="text-body-secondary">
+        Pharetra morbi libero id aliquam elit massa integer tellus. Quis felis
+        aliquam ullamcorper porttitor. Pulvinar ullamcorper sit dictumst ut eget a,
+        elementum eu. Maecenas est morbi mattis id in ac.
+      </p>
+      <a href="#" class="btn btn-dark">Read more</a>
+    </div>
+
+    <div class="col-md-4">
+      <img src="./img/1.jpg" class="img-fluid rounded shadow-sm" style="max-width: 400px;" alt="Pet">
+    </div>
+  </div>
+</section>
+
+
+
+
+.
+
+
+
+<!-- Contact + Newsletter Section -->
+<section id="contact-section" class="py-5">
+  <div class="container">
+    <div class="row g-5 align-items-start">
+      <!-- Title -->
+      <div class="col-12">
+        <h3 class="section-title d-flex align-items-center gap-2 mb-4">
+          <!-- Paw icon -->
+          <span class="paw-icon" aria-hidden="true">
+           
+            </svg>
+          </span>
+          <span>Get in touch</span>
+        </h3>
+      </div>
+
+      <!-- Contact form -->
+      <div class="col-lg-6">
+        <div class="card form-card shadow-sm bg-light opacity-3">
+          <div class="card-body">
+            <form id="contact-form" autocomplete="off">
+              <div class="row g-3">
+                <div class="col-md-6">
+           
+
+                  <label class="form-label small">First name</label>
+                  <input type="text" class="form-control text-dark border-dark opacity-25" placeholder="First name">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small">Last name</label>
+                  <input type="text" class="form-control form-control text-dark border-dark opacity-25" placeholder="Last name">
+                </div>
+                <div class="col-12">
+                  <label class="form-label small">Email</label>
+                  <input type="email" class="form-controlform-control text-dark border-dark opacity-25" placeholder="you@company.com">
+                </div>
+                <div class="col-12">
+                  <label class="form-label small">Message</label>
+                  <textarea class="form-control form-control text-dark border-dark opacity-25" rows="" placeholder="Write your message here..."></textarea>
+                </div>
+                <div class="col-12 d-flex justify-content-between align-items-center">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="agreeCheck">
+                    <label class="form-check-label small" for="agreeCheck">I agree to the privacy policy</label>
+                  </div>
+                  <button type="submit" class="btn btn-dark btn-sm px-4">Send message</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact info -->
+      <div class="col-lg-6">
+        <div class="contact-info text-light">
+          <div class="row gy-4">
+            <div class="col-12 d-flex gap-3">
+              <div class="icon-box ">
+                <!-- Email icon -->
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M2 6.5v11A2.5 2.5 0 004.5 20h15a2.5 2.5 0 002.5-2.5v-11A2.5 2.5 0 0019.5 4h-15A2.5 2.5 0 002 6.5z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 7.5L12 13 2 7.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <h6 class="mb-0">Email</h6>
+                <p class="small mb-0 text-muted">hello@pawsnplay.com</p>
+              </div>
+            </div>
+
+            <div class="col-12 d-flex gap-3">
+              <div class="icon-box">
+                <!-- Chat icon -->
+                <svg width="22 " height="22" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 01-2 2H8l-5 3V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <h6 class="mb-0">Live chat</h6>
+                <p class="small mb-0 text-muted">Start new chat</p>
+              </div>
+            </div>
+
+            <div class="col-12 d-flex gap-3">
+              <div class="icon-box">
+                <!-- Office icon -->
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="2" y="7" width="20" height="11" rx="2" stroke="currentColor" stroke-width="1.2"/></svg>
+              </div>
+              <div>
+                <h6 class="mb-0">Office</h6>
+                <p class="small mb-0 text-muted">123 Example Street, City</p>
+              </div>
+            </div>
+
+            <div class="col-12 d-flex gap-3">
+              <div class="icon-box">
+                <!-- Phone icon -->
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M22 16.92V20a2 2 0 01-2.18 2 19.86 19.86 0 01-8.63-3.11 19.5 19.5 0 01-6-6 19.86 19.86 0 01-3.11-8.63A2 2 0 014 2h3.09a1 1 0 01.99.86c.12 1.06.37 2.07.73 3.03a1 1 0 01-.24 1L7.35 8.64a16 16 0 006 6l1.75-1.22a1 1 0 011 .24c.96.36 1.97.61 3.03.73a1 1 0 01.86.99z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <h6 class="mb-0">Phone</h6>
+                <p class="small mb-0 text-muted">+20 123 456 789</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="row mt-5">
+      <div class="col-12">
+        <div class="newsletter d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 p-3 rounded">
+          <div>
+            <strong>Join our newsletter</strong>
+            <div class="small text-muted">Be the first to receive latest updates on promo, sales and offers.</div>
+          </div>
+          
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer mini -->
+    <div class="row mt-4">
+      <div class="col-12">
+        <div class="footer-links d-flex flex-wrap gap-3 small text-muted">
+          <div>© 2024 Paws n' Play. All rights reserved.</div>
+          <div class="ms-auto">Privacy · Terms · Contact</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer bg-dark text-white pt-5 pb-4">
+  <div class="container text-md-left">
+    <div class="row text-md-left">
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold">
+         <i class="fa-solid fa-paw me-2"></i> Paws n' Play
+        </h5>
+        <p>Where wagging tails and purring hearts reign supreme!</p>
+      </div>
+
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold ">Shop</h5>
+        <p><a href="#" class="text-white text-decoration-none">Pet Adoption</a></p>
+        <p><a href="#" class="text-white text-decoration-none">Nutrition</a></p>
+        <p><a href="#" class="text-white text-decoration-none">Pet Care</a></p>
+        <p><a href="#" class="text-white text-decoration-none">Pet Food</a></p>
+        <p><a href="#" class="text-white text-decoration-none">Pricing</a></p>
+      </div>
+
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold >Company</h5>
+        <p><a href="#" class="text-white text-decoration-none">About us</a></p>
+        <p><a href="#" class="text-white text-decoration-none">Careers</a></p>
+        <p><a href="#" class="text-white text-decoration-none">Press</a></p>
+        <p><a href="#" class="text-white text-decoration-none">News</a></p>
+        <p><a href="#" class="text-white text-decoration-none">Contact</a></p>
+      </div>
+
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold ">Services</h5>
+        <p><a href="#" class="text-white text-decoration-none">Grooming</a></p>
+        <p><a href="#" class="text-white text-decoration-none">Boarding</a></p>
+        <p><a href="#" class="text-white text-decoration-none">Training</a></p>
+        <p><a href="#" class="text-white text-decoration-none">Vetinary</a></p>
+        <p><a href="#" class="text-white text-decoration-none">Support</a></p>
+      </div>
+
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="mb-4 font-weight-bold ">Join our Newsletter</h5>
+        <form class="d-flex">
+          <input type="email" class="form-control me-2" placeholder="Enter your email" />
+          <button class="btn btn-light" type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <hr class="mb-4 mt-4" />
+
+    <div class="row align-items-center">
+      <div class="col-md-7 col-lg-8">
+        <p>© 2024 Paws n’ Play. All rights reserved.</p>
+      </div>
+      <div class="col-md-5 col-lg-4 text-center text-md-right">
+        <a href="#" class="text-white me-4"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-white me-4"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="text-white me-4"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="text-white me-4"><i class="fab fa-dribbble"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
