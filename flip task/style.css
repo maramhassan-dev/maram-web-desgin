@@ -1,0 +1,130 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #090606 url("background.jpg") center/cover no-repeat;
+  font-family: "Poppins", sans-serif;
+}
+
+.card {
+  width: 350px;
+  height: 500px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  backface-visibility: hidden;
+}
+
+
+.card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.front-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.front-text h3 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.icon-circle {
+  width: 35px;
+  height: 35px;
+  border: 1.5px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-circle i {
+  font-size: 0.9rem;
+}
+
+
+.card-back {
+  background: #ffffff;
+  transform: rotateY(180deg);
+  color: #1A2B5B;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 28px 30px;
+  text-align: left;
+}
+
+.logo {
+  font-size: 55px;
+  color: #4CAF50;
+}
+
+.card-back h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 15px;
+  line-height: 1.4;
+  color: #1A2B5B;
+}
+
+.card-back p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #5B6478;
+  margin-top: 10px;
+}
+
+.card-back a {
+  color: #1A73E8;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: auto;
+  align-self: flex-end;
+}
+
+.card-back a i {
+  width: 35px;
+  height: 35px;
+  border: 1.5px solid #1A73E8;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: #1A73E8;
+}
