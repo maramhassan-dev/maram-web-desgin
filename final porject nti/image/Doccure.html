@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)https://doccure.dreamstechnologies.com/react/template/home-1 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="icon" type="image/svg+xml" href="https://doccure.dreamstechnologies.com/react/template/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doccure</title>
+    <style data-fullcalendar=""></style><script type="module" crossorigin="" src="./Doccure_files/index-BrkZEK4y.js.download"></script>
+    <link rel="stylesheet" crossorigin="" href="./Doccure_files/index-DSnUUgnD.css">
+  <style>
+  .imageye-selected {
+    outline: 2px solid black !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important;
+  }
+</style><link rel="stylesheet" crossorigin="" href="./Doccure_files/main-B6G9ASWG.css"><style type="text/css" data-primereact-style-id="base">
+.p-hidden-accessible {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+    pointer-events: none;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.p-overflow-hidden {
+    overflow: hidden;
+    padding-right: var(--scrollbar-width);
+}
+</style><style type="text/css" data-primereact-style-id="global"></style><style type="text/css" data-primereact-style-id="common">
+@layer primereact {
+    .p-component, .p-component * {
+        box-sizing: border-box;
+    }
+
+    .p-hidden {
+        display: none;
+    }
+
+    .p-hidden-space {
+        visibility: hidden;
+    }
+
+    .p-reset {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        text-decoration: none;
+        font-size: 100%;
+        list-style: none;
+    }
+
+    .p-disabled, .p-disabled * {
+        cursor: default;
+        pointer-events: none;
+        user-select: none;
+    }
+
+    .p-component-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .p-unselectable-text {
+        user-select: none;
+    }
+
+    .p-scrollbar-measure {
+        width: 100px;
+        height: 100px;
+        overflow: scroll;
+        position: absolute;
+        top: -9999px;
+    }
+
+    @-webkit-keyframes p-fadein {
+      0%   { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    @keyframes p-fadein {
+      0%   { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    .p-link {
+        text-align: left;
+        background-color: transparent;
+        margin: 0;
+        padding: 0;
+        border: none;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .p-link:disabled {
+        cursor: default;
+    }
+
+    /* Non react overlay animations */
+    .p-connected-overlay {
+        opacity: 0;
+        transform: scaleY(0.8);
+        transition: transform .12s cubic-bezier(0, 0, 0.2, 1), opacity .12s cubic-bezier(0, 0, 0.2, 1);
+    }
+
+    .p-connected-overlay-visible {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+
+    .p-connected-overlay-hidden {
+        opacity: 0;
+        transform: scaleY(1);
+        transition: opacity .1s linear;
+    }
+
+    /* React based overlay animations */
+    .p-connected-overlay-enter {
+        opacity: 0;
+        transform: scaleY(0.8);
+    }
+
+    .p-connected-overlay-enter-active {
+        opacity: 1;
+        transform: scaleY(1);
+        transition: transform .12s cubic-bezier(0, 0, 0.2, 1), opacity .12s cubic-bezier(0, 0, 0.2, 1);
+    }
+
+    .p-connected-overlay-enter-done {
+        transform: none;
+    }
+
+    .p-connected-overlay-exit {
+        opacity: 1;
+    }
+
+    .p-connected-overlay-exit-active {
+        opacity: 0;
+        transition: opacity .1s linear;
+    }
+
+    /* Toggleable Content */
+    .p-toggleable-content-enter {
+        max-height: 0;
+    }
+
+    .p-toggleable-content-enter-active {
+        overflow: hidden;
+        max-height: 1000px;
+        transition: max-height 1s ease-in-out;
+    }
+
+    .p-toggleable-content-enter-done {
+        transform: none;
+    }
+
+    .p-toggleable-content-exit {
+        max-height: 1000px;
+    }
+
+    .p-toggleable-content-exit-active {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.45s cubic-bezier(0, 1, 0, 1);
+    }
+
+    /* @todo Refactor */
+    .p-menu .p-menuitem-link {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        overflow: hidden;
+        position: relative;
+    }
+
+    
+.p-button {
+    margin: 0;
+    display: inline-flex;
+    cursor: pointer;
+    user-select: none;
+    align-items: center;
+    vertical-align: bottom;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.p-button-label {
+    flex: 1 1 auto;
+}
+
+.p-button-icon-right {
+    order: 1;
+}
+
+.p-button:disabled {
+    cursor: default;
+}
+
+.p-button-icon-only {
+    justify-content: center;
+}
+
+.p-button-icon-only .p-button-label {
+    visibility: hidden;
+    width: 0;
+    flex: 0 0 auto;
+}
+
+.p-button-vertical {
+    flex-direction: column;
+}
+
+.p-button-icon-bottom {
+    order: 2;
+}
+
+.p-button-group .p-button {
+    margin: 0;
+}
+
+.p-button-group .p-button:not(:last-child) {
+    border-right: 0 none;
+}
+
+.p-button-group .p-button:not(:first-of-type):not(:last-of-type) {
+    border-radius: 0;
+}
+
+.p-button-group .p-button:first-of-type {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.p-button-group .p-button:last-of-type {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.p-button-group .p-button:focus {
+    position: relative;
+    z-index: 1;
+}
+
+.p-button-group-single .p-button:first-of-type {
+    border-top-right-radius: var(--border-radius) !important;
+    border-bottom-right-radius: var(--border-radius) !important;
+}
+
+.p-button-group-single .p-button:last-of-type {
+    border-top-left-radius: var(--border-radius) !important;
+    border-bottom-left-radius: var(--border-radius) !important;
+}
+
+    
+.p-inputtext {
+    margin: 0;
+}
+
+.p-fluid .p-inputtext {
+    width: 100%;
+}
+
+/* InputGroup */
+.p-inputgroup {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+}
+
+.p-inputgroup-addon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.p-inputgroup .p-float-label {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+}
+
+.p-inputgroup .p-inputtext,
+.p-fluid .p-inputgroup .p-inputtext,
+.p-inputgroup .p-inputwrapper,
+.p-fluid .p-inputgroup .p-input {
+    flex: 1 1 auto;
+    width: 1%;
+}
+
+/* Floating Label */
+.p-float-label {
+    display: block;
+    position: relative;
+}
+
+.p-float-label label {
+    position: absolute;
+    pointer-events: none;
+    top: 50%;
+    margin-top: -0.5rem;
+    transition-property: all;
+    transition-timing-function: ease;
+    line-height: 1;
+}
+
+.p-float-label textarea ~ label,
+.p-float-label .p-mention ~ label {
+    top: 1rem;
+}
+
+.p-float-label input:focus ~ label,
+.p-float-label input:-webkit-autofill ~ label,
+.p-float-label input.p-filled ~ label,
+.p-float-label textarea:focus ~ label,
+.p-float-label textarea.p-filled ~ label,
+.p-float-label .p-inputwrapper-focus ~ label,
+.p-float-label .p-inputwrapper-filled ~ label,
+.p-float-label .p-tooltip-target-wrapper ~ label {
+    top: -0.75rem;
+    font-size: 12px;
+}
+
+.p-float-label .p-placeholder,
+.p-float-label input::placeholder,
+.p-float-label .p-inputtext::placeholder {
+    opacity: 0;
+    transition-property: all;
+    transition-timing-function: ease;
+}
+
+.p-float-label .p-focus .p-placeholder,
+.p-float-label input:focus::placeholder,
+.p-float-label .p-inputtext:focus::placeholder {
+    opacity: 1;
+    transition-property: all;
+    transition-timing-function: ease;
+}
+
+.p-input-icon-left,
+.p-input-icon-right {
+    position: relative;
+    display: inline-block;
+}
+
+.p-input-icon-left > i,
+.p-input-icon-right > i,
+.p-input-icon-left > svg,
+.p-input-icon-right > svg,
+.p-input-icon-left > .p-input-prefix,
+.p-input-icon-right > .p-input-suffix {
+    position: absolute;
+    top: 50%;
+    margin-top: -0.5rem;
+}
+
+.p-fluid .p-input-icon-left,
+.p-fluid .p-input-icon-right {
+    display: block;
+    width: 100%;
+}
+
+    
+.p-icon {
+    display: inline-block;
+}
+
+.p-icon-spin {
+    -webkit-animation: p-icon-spin 2s infinite linear;
+    animation: p-icon-spin 2s infinite linear;
+}
+
+svg.p-icon {
+    pointer-events: auto;
+}
+
+svg.p-icon g,
+.p-disabled svg.p-icon {
+    pointer-events: none;
+}
+
+@-webkit-keyframes p-icon-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes p-icon-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+}
+</style><style type="text/css" data-primereact-style-id="calendar">
+@layer primereact {
+    .p-calendar {
+        position: relative;
+        display: inline-flex;
+        max-width: 100%;
+    }
+
+    .p-calendar .p-inputtext {
+        flex: 1 1 auto;
+        width: 1%;
+    }
+
+    .p-calendar-w-btn-right .p-inputtext {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .p-calendar-w-btn-right .p-datepicker-trigger {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .p-calendar-w-btn-left .p-inputtext {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .p-calendar-w-btn-left .p-datepicker-trigger {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    /* Fluid */
+    .p-fluid .p-calendar {
+        display: flex;
+    }
+
+    .p-fluid .p-calendar .p-inputtext {
+        width: 1%;
+    }
+
+    /* Datepicker */
+    .p-calendar .p-datepicker {
+        min-width: 100%;
+    }
+
+    .p-datepicker {
+        width: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .p-datepicker-inline {
+        display: inline-block;
+        position: static;
+        overflow-x: auto;
+    }
+
+    /* Header */
+    .p-datepicker-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .p-datepicker-header .p-datepicker-title {
+        margin: 0 auto;
+    }
+
+    .p-datepicker-prev,
+    .p-datepicker-next {
+        cursor: pointer;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+    }
+
+    /* Multiple Month DatePicker */
+    .p-datepicker-multiple-month .p-datepicker-group-container {
+        display: flex;
+    }
+
+    .p-datepicker-multiple-month .p-datepicker-group-container .p-datepicker-group {
+        flex: 1 1 auto;
+    }
+
+    /* Multiple Month DatePicker */
+    .p-datepicker-multiple-month .p-datepicker-group-container {
+        display: flex;
+    }
+
+    /* DatePicker Table */
+    .p-datepicker table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .p-datepicker td > span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+    }
+
+    /* Month Picker */
+    .p-monthpicker-month {
+        width: 33.3%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        overflow: hidden;
+        position: relative;
+    }
+
+    /*  Button Bar */
+    .p-datepicker-buttonbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Time Picker */
+    .p-timepicker {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .p-timepicker button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .p-timepicker > div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    /* Touch UI */
+    .p-datepicker-touch-ui,
+    .p-calendar .p-datepicker-touch-ui {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 80vw;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Year Picker */
+    .p-yearpicker-year {
+        width: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        overflow: hidden;
+        position: relative;
+    }
+}
+</style></head>
+  <body data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="0">
+    <div id="root"><div><div class="main-wrapper"><div class="home-one"><header class="header header-custom header-fixed inner-header relative fixed pharmacy-header"><div class="container"><nav class="navbar navbar-expand-lg header-nav"><div class="navbar-header"><a id="mobile_btn" href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><span class="bar-icon"><span></span><span></span><span></span></span></a><a class="navbar-brand logo" href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><img class="img-fluid" alt="Logo" src="./Doccure_files/logo.svg"></a></div><div class="main-menu-wrapper"><div class="menu-header"><a class="menu-logo" href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><img class="img-fluid" alt="Logo" src="./Doccure_files/logo-01.svg"></a><a id="menu_close" class="menu-close" href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><i class="fas fa-times"></i></a></div><ul class="main-nav"><li class="has-submenu megamenu  active"><a class="" href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true">Home <i class="fas fa-chevron-down"></i></a><ul class="submenu mega-submenu"><li><div class="megamenu-wrapper"><div class="row"><div class="col-lg-2"><div class="single-demo "><div class="demo-img"><a class="inner-demo-img" href="https://doccure.dreamstechnologies.com/react/template/index" data-discover="true"><img class="img-fluid " alt="img" src="./Doccure_files/home.jpg"></a></div><div class="demo-info"><a class="inner-demo-img" href="https://doccure.dreamstechnologies.com/react/template/index" data-discover="true">General Home 1</a></div></div></div><div class="col-lg-2"><div class="single-demo active"><div class="demo-img"><a class="inner-demo-img" href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><img class="img-fluid " alt="img" src="./Doccure_files/home-01.jpg"></a></div><div class="demo-info"><a class="inner-demo-img" href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true">General Home 2</a></div></div></div><div class="col-lg-2"><div class="single-demo "><div class="demo-img"><a class="inner-demo-img" href="https://doccure.dreamstechnologies.com/react/template/home-2" data-discover="true"><img class="img-fluid " alt="img" src="./Doccure_files/home-02.jpg"></a></div><div class="demo-info"><a class="inner-demo-img" href="https://doccure.dreamstechnologies.com/react/template/home-2" data-discover="true">General Home 3</a></div></div></div><div class="col-lg-2"><div class="single-demo "><div class="demo-img"><a class="inner-demo-img" href="https://doccure.dreamstechnologies.com/react/template/home-3" data-discover="true"><img class="img-fluid " alt="img" src="./Doccure_files/home-03.jpg"></a></div><div class="demo-info"><a class="inner-demo-img" href="https://doccure.dreamstechnologies.com/react/template/home-3" data-discover="true">General Home 4</a></div></div></div><div class="col-lg-2"><div class="single-demo "><div class="demo-img"><a class="inner-demo-img" href="https://doccure.dreamstechnologies.com/react/template/home-5" data-discover="true"><img class="img-fluid " alt="img" src="./Doccure_files/home-04.jpg"></a></div><div class="demo-info"><a class="inner-demo-img" href="https://doccure.dreamstechnologies.com/react/template/home-5" data-discover="true">Cardiology</a></div></div></div><div class="col-lg-2"><div class="single-demo "><div class="demo-img"><a class="inner-demo-img" href="https://doccure.dreamstechnologies.com/react/template/home-6" data-discover="true"><img class="img-fluid " alt="img" src="./Doccure_files/home-05.jpg"></a></div><div class="demo-info"><a class="inner-demo-img" href="https://doccure.dreamstechnologies.com/react/template/home-6" data-discover="true">Eyecare</a></div></div></div><div class="col-lg-2"><div class="single-demo "><div class="demo-img"><a class="inner-demo-img" href="https://doccure.dreamstechnologies.com/react/template/home-7" data-discover="true"><img class="img-fluid " alt="img" src="./Doccure_files/home-06.jpg"></a></div><div class="demo-info"><a class="inner-demo-img" href="https://doccure.dreamstechnologies.com/react/template/home-7" data-discover="true">Veterinary</a></div></div></div><div class="col-lg-2"><div class="single-demo "><div class="demo-img"><a class="inner-demo-img" href="https://doccure.dreamstechnologies.com/react/template/home-8" data-discover="true"><img class="img-fluid " alt="img" src="./Doccure_files/home-07.jpg"></a></div><div class="demo-info"><a class="inner-demo-img" href="https://doccure.dreamstechnologies.com/react/template/home-8" data-discover="true">Pediatric</a></div></div></div><div class="col-lg-2"><div class="single-demo "><div class="demo-img"><a class="inner-demo-img" href="https://doccure.dreamstechnologies.com/react/template/home-9" data-discover="true"><img class="img-fluid " alt="img" src="./Doccure_files/home-08.jpg"></a></div><div class="demo-info"><a class="inner-demo-img" href="https://doccure.dreamstechnologies.com/react/template/home-9" data-discover="true">Fertility</a></div></div></div><div class="col-lg-2"><div class="single-demo "><div class="demo-img"><a class="inner-demo-img" href="https://doccure.dreamstechnologies.com/react/template/home-10" data-discover="true"><img class="img-fluid " alt="img" src="./Doccure_files/home-09.jpg"></a></div><div class="demo-info"><a class="inner-demo-img" href="https://doccure.dreamstechnologies.com/react/template/home-10" data-discover="true">ENT</a></div></div></div><div class="col-lg-2"><div class="single-demo "><div class="demo-img"><a class="inner-demo-img" href="https://doccure.dreamstechnologies.com/react/template/home-11" data-discover="true"><img class="img-fluid " alt="img" src="./Doccure_files/home-10.jpg"></a></div><div class="demo-info"><a class="inner-demo-img" href="https://doccure.dreamstechnologies.com/react/template/home-11" data-discover="true">Cosmetics</a></div></div></div><div class="col-lg-2"><div class="single-demo "><div class="demo-img"><a class="inner-demo-img" href="https://doccure.dreamstechnologies.com/react/template/home-12" data-discover="true"><img class="img-fluid " alt="img" src="./Doccure_files/home-11.jpg"></a></div><div class="demo-info"><a class="inner-demo-img" href="https://doccure.dreamstechnologies.com/react/template/home-12" data-discover="true">Lab Test</a></div></div></div><div class="col-lg-2"><div class="single-demo "><div class="demo-img"><a class="inner-demo-img" href="https://doccure.dreamstechnologies.com/react/template/Pharmacy/Pharmacy-index" data-discover="true"><img class="img-fluid" alt="img" src="./Doccure_files/home-12.jpg"></a></div><div class="demo-info"><a class="inner-demo-img" href="https://doccure.dreamstechnologies.com/react/template/home-12" data-discover="true">Pharmacy</a></div></div></div><div class="col-lg-2"><div class="single-demo "><div class="demo-img"><a class="inner-demo-img" href="https://doccure.dreamstechnologies.com/react/template/home-13" data-discover="true"><img class="img-fluid " alt="img" src="./Doccure_files/home-13.jpg"></a></div><div class="demo-info"><a class="inner-demo-img" href="https://doccure.dreamstechnologies.com/react/template/home-13" data-discover="true">Home Care</a></div></div></div><div class="col-lg-2"><div class="single-demo "><div class="demo-img"><a class="inner-demo-img" href="https://doccure.dreamstechnologies.com/react/template/home-14" data-discover="true"><img class="img-fluid " alt="img" src="./Doccure_files/home-14.jpg"></a></div><div class="demo-info"><a class="inner-demo-img" href="https://doccure.dreamstechnologies.com/react/template/home-14" data-discover="true">Dentists</a></div></div></div></div></div></li></ul></li><li class="has-submenu "><a class="" href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true">Doctors <i class="fas fa-chevron-down"></i></a></li><li class="has-submenu "><a class="" href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true">Patients <i class="fas fa-chevron-down"></i></a></li><li class="has-submenu "><a class="" href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true">Pharmacy <i class="fas fa-chevron-down"></i></a></li><li class="has-submenu "><a class="" href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true">Pages <i class="fas fa-chevron-down"></i></a></li><li class="has-submenu "><a class="" href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true">Blog <i class="fas fa-chevron-down"></i></a></li><li class="has-submenu"><a class="" href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true">Admin<i class="fas fa-chevron-down"></i></a></li></ul></div><ul class="nav header-navbar-rht"><li class="register-btn"><a class="btn btn-dark reg-btn" href="https://doccure.dreamstechnologies.com/react/template/register" data-discover="true"><i class="feather icon-user"></i>Register</a></li><li class="register-btn"><a class="btn btn-primary log-btn" href="https://doccure.dreamstechnologies.com/react/template/login" data-discover="true"><i class="feather icon-lock"></i>Login</a></li></ul></nav></div></header><section class="banner-section"><div class="container"><div class="row align-items-center"><div class="col-lg-6"><div class="banner-content aos aos-init aos-animate" data-aos="fade-up"><h1>Consult <span>Best Doctors</span> Your Nearby Location.</h1><img class="header-icon" alt="header-icon" src="./Doccure_files/header-icon.svg"><p>Embark on your healing journey with Doccure</p><a class="btn btn-primary" href="https://doccure.dreamstechnologies.com/react/template/patient/booking1" data-discover="true">Start a Consult</a><div class="banner-arrow-img"><img class="img-fluid" alt="down-arrow" src="./Doccure_files/down-arrow-img.png"></div></div><div class="search-box-one aos aos-init aos-animate" data-aos="fade-up"><form><div class="search-input search-line"><i class="feather icon-search bficon"></i><div class=" mb-0"><input class="form-control" placeholder="Search doctors, clinics, hospitals, etc" type="text"></div></div><div class="search-input search-map-line"><i class="feather icon-map-pin"></i><div class=" mb-0"><input class="form-control" placeholder="Location" type="text"><a class="current-loc-icon current_location" href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><i class="feather icon-crosshair"></i></a></div></div><div class="search-input search-calendar-line"><i class="feather icon-calendar"></i><div class=" mb-0"><span class="custom-date-picker p-calendar p-component p-inputwrapper" data-pc-name="calendar" data-pc-section="root"><input class="p-inputtext p-component" role="combobox" autocomplete="off" placeholder="From" aria-expanded="false" aria-autocomplete="none" aria-haspopup="dialog" aria-controls="pr_id_8_panel" inputmode="none" data-pc-name="inputtext" data-pc-section="root" type="text"></span></div></div><div class="form-search-btn"><button class="btn btn-primary" type="submit">Search</button></div></form></div></div><div class="col-lg-6"><div class="banner-img aos aos-init aos-animate" data-aos="fade-up"><img class="img-fluid" alt="patient-image" src="./Doccure_files/banner-img.png"><div class="banner-img1"><img class="img-fluid" alt="checkup-image" src="./Doccure_files/banner-img1.svg"></div><div class="banner-img2"><img class="img-fluid" alt="doctor-slide" src="./Doccure_files/banner-img2.svg"></div><div class="banner-img3"><img class="img-fluid" alt="doctors-list" src="./Doccure_files/banner-img3.svg"></div></div></div></div></div></section><section class="specialities-section-one"><div class="container"><div class="service-sec-one"><div class="row row-cols-7 row-cols-xxl-7 row-cols-xl-4 row-cols-lg-4 rows-cols-md-6 justify-content-center"><div class="col-12 d-flex col-xxl col-lg-3 col-sm-6"><a class="serv-wrap blue-bg flex-fill" href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><span><img alt="heart-image" src="./Doccure_files/service-01.svg"></span><h4>Book Appointment</h4></a></div><div class="col-12 d-flex col-xxl col-lg-3 col-sm-6"><a class="serv-wrap green-bg flex-fill" href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><span><img alt="heart-image" src="./Doccure_files/service-02.svg"></span><h4>Lab Testing Services</h4></a></div><div class="col-12 d-flex col-xxl col-lg-3 col-sm-6"><a class="serv-wrap info-bg flex-fill" href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><span><img alt="heart-image" src="./Doccure_files/service-03.svg"></span><h4>Medicines &amp; Supplies</h4></a></div><div class="col-12 d-flex col-xxl col-lg-3 col-sm-6"><a class="serv-wrap red-bg flex-fill" href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><span><img alt="heart-image" src="./Doccure_files/service-04.svg"></span><h4>Hospitals / Clinics</h4></a></div><div class="col-12 d-flex col-xxl col-lg-3 col-sm-6"><a class="serv-wrap success-bg flex-fill" href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><span><img alt="heart-image" src="./Doccure_files/service-05.svg"></span><h4>Health Care Services</h4></a></div><div class="col-12 d-flex col-xxl col-lg-3 col-sm-6"><a class="serv-wrap pink-bg flex-fill" href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><span><img alt="heart-image" src="./Doccure_files/service-06.svg"></span><h4>Talk to Doctor’s</h4></a></div><div class="col-12 d-flex col-xxl col-lg-3 col-sm-6"><a class="serv-wrap danger-bg flex-fill" href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><span><img alt="heart-image" src="./Doccure_files/service-07.svg"></span><h4>Home Care Services</h4></a></div></div></div><div class="row"><div class="col-md-6 col-7 aos aos-init" data-aos="fade-up"><div class="section-header-one section-header-slider"><h2 class="section-title">Specialities</h2></div></div><div class="col-md-6 col-5 aos aos-init" data-aos="fade-up"><div class="owl-nav slide-nav-1 text-end nav-control"></div></div></div><div class="specialities-slider-one owl-theme aos slick-arrow-right aos-init" data-aos="fade-up"><div class="slick-slider slick-initialized" dir="ltr"><div class="owl-nav slide-nav-1 text-end nav-control"><button type="button" role="presentation" class="owl-prev"><i class="fas fa-chevron-left custom-arrow"></i></button></div><div class="slick-list"><div class="slick-track" style="width: 1760px; opacity: 1; transform: translate3d(-220px, 0px, 0px);"><div data-index="-2" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 110px;"><div><div class="item" tabindex="-1" style="width: 100%; display: inline-block;"><div class="specialities-item"><div class="specialities-img"><span><img alt="eye-image" src="./Doccure_files/specialities-06.svg"></span></div><p>Ophthalmology</p></div></div></div></div><div data-index="-1" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 110px;"><div><div class="item" tabindex="-1" style="width: 100%; display: inline-block;"><div class="specialities-item"><div class="specialities-img"><span><img alt="brain-image" src="./Doccure_files/specialities-02.svg"></span></div><p>Neurology</p></div></div></div></div><div data-index="0" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline: none; width: 110px;"><div><div class="item" tabindex="-1" style="width: 100%; display: inline-block;"><div class="specialities-item"><div class="specialities-img"><span><img alt="heart-image" src="./Doccure_files/specialities-01.svg"></span></div><p>Cardiology</p></div></div></div></div><div data-index="1" class="slick-slide slick-active" tabindex="-1" aria-hidden="false" style="outline: none; width: 110px;"><div><div class="item" tabindex="-1" style="width: 100%; display: inline-block;"><div class="specialities-item"><div class="specialities-img"><span><img alt="brain-image" src="./Doccure_files/specialities-02.svg"></span></div><p>Neurology</p></div></div></div></div><div data-index="2" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 110px;"><div><div class="item" tabindex="-1" style="width: 100%; display: inline-block;"><div class="specialities-item"><div class="specialities-img"><span><img alt="kidney-image" src="./Doccure_files/specialities-03.svg"></span></div><p>Urology</p></div></div></div></div><div data-index="3" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 110px;"><div><div class="item" tabindex="-1" style="width: 100%; display: inline-block;"><div class="specialities-item"><div class="specialities-img"><span><img alt="bone-image" src="./Doccure_files/specialities-04.svg"></span></div><p>Orthopedic</p></div></div></div></div><div data-index="4" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 110px;"><div><div class="item" tabindex="-1" style="width: 100%; display: inline-block;"><div class="specialities-item"><div class="specialities-img"><span><img alt="dentist" src="./Doccure_files/specialities-05.svg"></span></div><p>Dentist</p></div></div></div></div><div data-index="5" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 110px;"><div><div class="item" tabindex="-1" style="width: 100%; display: inline-block;"><div class="specialities-item"><div class="specialities-img"><span><img alt="eye-image" src="./Doccure_files/specialities-06.svg"></span></div><p>Ophthalmology</p></div></div></div></div><div data-index="6" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 110px;"><div><div class="item" tabindex="-1" style="width: 100%; display: inline-block;"><div class="specialities-item"><div class="specialities-img"><span><img alt="brain-image" src="./Doccure_files/specialities-02.svg"></span></div><p>Neurology</p></div></div></div></div><div data-index="7" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 110px;"><div><div class="item" tabindex="-1" style="width: 100%; display: inline-block;"><div class="specialities-item"><div class="specialities-img"><span><img alt="heart-image" src="./Doccure_files/specialities-01.svg"></span></div><p>Cardiology</p></div></div></div></div><div data-index="8" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 110px;"><div><div class="item" tabindex="-1" style="width: 100%; display: inline-block;"><div class="specialities-item"><div class="specialities-img"><span><img alt="brain-image" src="./Doccure_files/specialities-02.svg"></span></div><p>Neurology</p></div></div></div></div><div data-index="9" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 110px;"><div><div class="item" tabindex="-1" style="width: 100%; display: inline-block;"><div class="specialities-item"><div class="specialities-img"><span><img alt="kidney-image" src="./Doccure_files/specialities-03.svg"></span></div><p>Urology</p></div></div></div></div><div data-index="10" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 110px;"><div><div class="item" tabindex="-1" style="width: 100%; display: inline-block;"><div class="specialities-item"><div class="specialities-img"><span><img alt="bone-image" src="./Doccure_files/specialities-04.svg"></span></div><p>Orthopedic</p></div></div></div></div><div data-index="11" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 110px;"><div><div class="item" tabindex="-1" style="width: 100%; display: inline-block;"><div class="specialities-item"><div class="specialities-img"><span><img alt="dentist" src="./Doccure_files/specialities-05.svg"></span></div><p>Dentist</p></div></div></div></div><div data-index="12" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 110px;"><div><div class="item" tabindex="-1" style="width: 100%; display: inline-block;"><div class="specialities-item"><div class="specialities-img"><span><img alt="eye-image" src="./Doccure_files/specialities-06.svg"></span></div><p>Ophthalmology</p></div></div></div></div><div data-index="13" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 110px;"><div><div class="item" tabindex="-1" style="width: 100%; display: inline-block;"><div class="specialities-item"><div class="specialities-img"><span><img alt="brain-image" src="./Doccure_files/specialities-02.svg"></span></div><p>Neurology</p></div></div></div></div></div></div><div class="owl-nav slide-nav-1 text-end nav-control"><button type="button" role="presentation" class="owl-next"><i class="fas fa-chevron-right custom-arrow"></i></button></div></div></div><div class="specialities-btn aos aos-init" data-aos="fade-up"><a class="btn btn-primary" href="https://doccure.dreamstechnologies.com/react/template/patient/search-doctor1" data-discover="true">See All Specialities</a></div></div></section><section class="doctors-section"><div class="container"><div class="row"><div class="col-md-12 aos aos-init" data-aos="fade-up"><div class="section-header-one section-header-slider text-center"><h2 class="section-title">Best Doctors</h2></div></div></div><div class="doctor-slider-one owl-theme aos aos-init" data-aos="fade-up"><div class="slick-slider slick-initialized" dir="ltr"><div class="slick-list"><div class="slick-track" style="width: 1320px; opacity: 1; transform: translate3d(-550px, 0px, 0px);"><div data-index="-2" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 110px;"><div><div class="item" tabindex="-1" style="width: 100%; display: inline-block;"><div class="doctor-profile-widget doc-item"><div class="doc-pro-img"><a href="https://doccure.dreamstechnologies.com/react/template/patient/doctor-profile" data-discover="true"><div class="doctor-profile-img"><img class="img-fluid" alt="Sofia Brient" src="./Doccure_files/doctor-05.jpg"></div></a><div class="doctor-amount"><span>$250</span></div></div><div class="doc-content"><div class="doc-pro-info"><div class="doc-pro-name"><a href="https://doccure.dreamstechnologies.com/react/template/patient/doctor-profile" data-discover="true">Dr. Palmore</a><p>Immunologist</p></div><div class="reviews-ratings"><p><span><i class="fas fa-star"></i> 4.5</span> (35)</p></div></div><div class="doc-pro-location"><p><i class="feather icon-map-pin"></i> Waipahu, HI</p><span class="badge badge-success doc-badge"><i class="fa-solid fa-circle"></i>Available</span></div></div></div></div></div></div><div data-index="-1" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 110px;"><div><div class="item" tabindex="-1" style="width: 100%; display: inline-block;"><div class="doctor-profile-widget doc-item"><div class="doc-pro-img"><a href="https://doccure.dreamstechnologies.com/react/template/patient/doctor-profile" data-discover="true"><div class="doctor-profile-img"><img class="img-fluid" alt="John Doe" src="./Doccure_files/doctor-01.jpg"></div></a><div class="doctor-amount"><span>$880</span></div></div><div class="doc-content"><div class="doc-pro-info"><div class="doc-pro-name"><a href="https://doccure.dreamstechnologies.com/react/template/patient/doctor-profile" data-discover="true">Dr. Paul Richard</a><p>Dentist</p></div><div class="reviews-ratings"><p><span><i class="fas fa-star"></i> 4.4</span> (50)</p></div></div><div class="doc-pro-location"><p><i class="feather icon-map-pin"></i> California, USA</p><span class="badge badge-success doc-badge"><i class="fa-solid fa-circle"></i>Available</span></div></div></div></div></div></div><div data-index="0" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 110px;"><div><div class="item" tabindex="-1" style="width: 100%; display: inline-block;"><div class="doctor-profile-widget doc-item"><div class="doc-pro-img"><a href="https://doccure.dreamstechnologies.com/react/template/patient/doctor-profile" data-discover="true"><div class="doctor-profile-img"><img class="img-fluid" alt="Ruby Perrin" src="./Doccure_files/doctor-03.jpg"></div></a><div class="doctor-amount"><span>$200</span></div></div><div class="doc-content"><div class="doc-pro-info"><div class="doc-pro-name"><a href="https://doccure.dreamstechnologies.com/react/template/patient/doctor-profile" data-discover="true">Dr. Downer</a><p>Orthopedic</p></div><div class="reviews-ratings"><p><span><i class="fas fa-star"></i> 4.5</span> (35)</p></div></div><div class="doc-pro-location"><p><i class="feather icon-map-pin"></i> Newyork, USA</p><span class="badge badge-success doc-badge"><i class="fa-solid fa-circle"></i>Available</span></div></div></div></div></div></div><div data-index="1" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 110px;"><div><div class="item" tabindex="-1" style="width: 100%; display: inline-block;"><div class="doctor-profile-widget doc-item"><div class="doc-pro-img"><a href="https://doccure.dreamstechnologies.com/react/template/patient/doctor-profile" data-discover="true"><div class="doctor-profile-img"><img class="img-fluid" alt="Paul Richard" src="./Doccure_files/doctor-02.jpg"></div></a><div class="doctor-amount"><span>$300</span></div></div><div class="doc-content"><div class="doc-pro-info"><div class="doc-pro-name"><a href="https://doccure.dreamstechnologies.com/react/template/patient/doctor-profile" data-discover="true">Dr. John Doe</a><p>Dentist</p></div><div class="reviews-ratings"><p><span><i class="fas fa-star"></i> 4.3</span> (45)</p></div></div><div class="doc-pro-location"><p><i class="feather icon-map-pin"></i> Austin, TX</p><span class="badge badge-success doc-badge"><i class="fa-solid fa-circle"></i>Available</span></div></div></div></div></div></div><div data-index="2" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 110px;"><div><div class="item" tabindex="-1" style="width: 100%; display: inline-block;"><div class="doctor-profile-widget doc-item"><div class="doc-pro-img"><a href="https://doccure.dreamstechnologies.com/react/template/patient/doctor-profile" data-discover="true"><div class="doctor-profile-img"><img class="img-fluid" alt="Darren Elder" src="./Doccure_files/doctor-04.jpg"></div></a><div class="doctor-amount"><span>$100</span></div></div><div class="doc-content"><div class="doc-pro-info"><div class="doc-pro-name"><a href="https://doccure.dreamstechnologies.com/react/template/patient/doctor-profile" data-discover="true">Dr. Aviles</a><p>Neurology</p></div><div class="reviews-ratings"><p><span><i class="fas fa-star"></i> 4.0</span> (20)</p></div></div><div class="doc-pro-location"><p><i class="feather icon-map-pin"></i> Newyork, USA</p><span class="badge badge-danger doc-badge"><i class="fa-solid fa-circle"></i>Unavailable</span></div></div></div></div></div></div><div data-index="3" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline: none; width: 110px;"><div><div class="item" tabindex="-1" style="width: 100%; display: inline-block;"><div class="doctor-profile-widget doc-item"><div class="doc-pro-img"><a href="https://doccure.dreamstechnologies.com/react/template/patient/doctor-profile" data-discover="true"><div class="doctor-profile-img"><img class="img-fluid" alt="Sofia Brient" src="./Doccure_files/doctor-05.jpg"></div></a><div class="doctor-amount"><span>$250</span></div></div><div class="doc-content"><div class="doc-pro-info"><div class="doc-pro-name"><a href="https://doccure.dreamstechnologies.com/react/template/patient/doctor-profile" data-discover="true">Dr. Palmore</a><p>Immunologist</p></div><div class="reviews-ratings"><p><span><i class="fas fa-star"></i> 4.5</span> (35)</p></div></div><div class="doc-pro-location"><p><i class="feather icon-map-pin"></i> Waipahu, HI</p><span class="badge badge-success doc-badge"><i class="fa-solid fa-circle"></i>Available</span></div></div></div></div></div></div><div data-index="4" class="slick-slide slick-active" tabindex="-1" aria-hidden="false" style="outline: none; width: 110px;"><div><div class="item" tabindex="-1" style="width: 100%; display: inline-block;"><div class="doctor-profile-widget doc-item"><div class="doc-pro-img"><a href="https://doccure.dreamstechnologies.com/react/template/patient/doctor-profile" data-discover="true"><div class="doctor-profile-img"><img class="img-fluid" alt="John Doe" src="./Doccure_files/doctor-01.jpg"></div></a><div class="doctor-amount"><span>$880</span></div></div><div class="doc-content"><div class="doc-pro-info"><div class="doc-pro-name"><a href="https://doccure.dreamstechnologies.com/react/template/patient/doctor-profile" data-discover="true">Dr. Paul Richard</a><p>Dentist</p></div><div class="reviews-ratings"><p><span><i class="fas fa-star"></i> 4.4</span> (50)</p></div></div><div class="doc-pro-location"><p><i class="feather icon-map-pin"></i> California, USA</p><span class="badge badge-success doc-badge"><i class="fa-solid fa-circle"></i>Available</span></div></div></div></div></div></div><div data-index="5" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 110px;"><div><div class="item" tabindex="-1" style="width: 100%; display: inline-block;"><div class="doctor-profile-widget doc-item"><div class="doc-pro-img"><a href="https://doccure.dreamstechnologies.com/react/template/patient/doctor-profile" data-discover="true"><div class="doctor-profile-img"><img class="img-fluid" alt="Ruby Perrin" src="./Doccure_files/doctor-03.jpg"></div></a><div class="doctor-amount"><span>$200</span></div></div><div class="doc-content"><div class="doc-pro-info"><div class="doc-pro-name"><a href="https://doccure.dreamstechnologies.com/react/template/patient/doctor-profile" data-discover="true">Dr. Downer</a><p>Orthopedic</p></div><div class="reviews-ratings"><p><span><i class="fas fa-star"></i> 4.5</span> (35)</p></div></div><div class="doc-pro-location"><p><i class="feather icon-map-pin"></i> Newyork, USA</p><span class="badge badge-success doc-badge"><i class="fa-solid fa-circle"></i>Available</span></div></div></div></div></div></div><div data-index="6" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 110px;"><div><div class="item" tabindex="-1" style="width: 100%; display: inline-block;"><div class="doctor-profile-widget doc-item"><div class="doc-pro-img"><a href="https://doccure.dreamstechnologies.com/react/template/patient/doctor-profile" data-discover="true"><div class="doctor-profile-img"><img class="img-fluid" alt="Paul Richard" src="./Doccure_files/doctor-02.jpg"></div></a><div class="doctor-amount"><span>$300</span></div></div><div class="doc-content"><div class="doc-pro-info"><div class="doc-pro-name"><a href="https://doccure.dreamstechnologies.com/react/template/patient/doctor-profile" data-discover="true">Dr. John Doe</a><p>Dentist</p></div><div class="reviews-ratings"><p><span><i class="fas fa-star"></i> 4.3</span> (45)</p></div></div><div class="doc-pro-location"><p><i class="feather icon-map-pin"></i> Austin, TX</p><span class="badge badge-success doc-badge"><i class="fa-solid fa-circle"></i>Available</span></div></div></div></div></div></div><div data-index="7" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 110px;"><div><div class="item" tabindex="-1" style="width: 100%; display: inline-block;"><div class="doctor-profile-widget doc-item"><div class="doc-pro-img"><a href="https://doccure.dreamstechnologies.com/react/template/patient/doctor-profile" data-discover="true"><div class="doctor-profile-img"><img class="img-fluid" alt="Darren Elder" src="./Doccure_files/doctor-04.jpg"></div></a><div class="doctor-amount"><span>$100</span></div></div><div class="doc-content"><div class="doc-pro-info"><div class="doc-pro-name"><a href="https://doccure.dreamstechnologies.com/react/template/patient/doctor-profile" data-discover="true">Dr. Aviles</a><p>Neurology</p></div><div class="reviews-ratings"><p><span><i class="fas fa-star"></i> 4.0</span> (20)</p></div></div><div class="doc-pro-location"><p><i class="feather icon-map-pin"></i> Newyork, USA</p><span class="badge badge-danger doc-badge"><i class="fa-solid fa-circle"></i>Unavailable</span></div></div></div></div></div></div><div data-index="8" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 110px;"><div><div class="item" tabindex="-1" style="width: 100%; display: inline-block;"><div class="doctor-profile-widget doc-item"><div class="doc-pro-img"><a href="https://doccure.dreamstechnologies.com/react/template/patient/doctor-profile" data-discover="true"><div class="doctor-profile-img"><img class="img-fluid" alt="Sofia Brient" src="./Doccure_files/doctor-05.jpg"></div></a><div class="doctor-amount"><span>$250</span></div></div><div class="doc-content"><div class="doc-pro-info"><div class="doc-pro-name"><a href="https://doccure.dreamstechnologies.com/react/template/patient/doctor-profile" data-discover="true">Dr. Palmore</a><p>Immunologist</p></div><div class="reviews-ratings"><p><span><i class="fas fa-star"></i> 4.5</span> (35)</p></div></div><div class="doc-pro-location"><p><i class="feather icon-map-pin"></i> Waipahu, HI</p><span class="badge badge-success doc-badge"><i class="fa-solid fa-circle"></i>Available</span></div></div></div></div></div></div><div data-index="9" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 110px;"><div><div class="item" tabindex="-1" style="width: 100%; display: inline-block;"><div class="doctor-profile-widget doc-item"><div class="doc-pro-img"><a href="https://doccure.dreamstechnologies.com/react/template/patient/doctor-profile" data-discover="true"><div class="doctor-profile-img"><img class="img-fluid" alt="John Doe" src="./Doccure_files/doctor-01.jpg"></div></a><div class="doctor-amount"><span>$880</span></div></div><div class="doc-content"><div class="doc-pro-info"><div class="doc-pro-name"><a href="https://doccure.dreamstechnologies.com/react/template/patient/doctor-profile" data-discover="true">Dr. Paul Richard</a><p>Dentist</p></div><div class="reviews-ratings"><p><span><i class="fas fa-star"></i> 4.4</span> (50)</p></div></div><div class="doc-pro-location"><p><i class="feather icon-map-pin"></i> California, USA</p><span class="badge badge-success doc-badge"><i class="fa-solid fa-circle"></i>Available</span></div></div></div></div></div></div></div></div></div></div></div></section><section class="pricing-section doc-plan"><div class="container"><div class="row"><div class="col-md-12 text-center aos aos-init" data-aos="fade-up"><div class="section-header-one"><h2 class="section-title">Pricing Plan</h2></div></div></div><div class="row justify-content-center align-items-center"><div class="col-lg-4 col-sm-12 aos aos-init" data-aos="fade-up"><div class="card pricing-card"><div class="card-body"><div class="pricing-header"><div class="pricing-header-info"><div class="pricing-icon"><span><img alt="icon" src="./Doccure_files/price-icon1.svg"></span></div><div class="pricing-title"><h4>Basic</h4></div></div></div><div class="pricing-info"><div class="pricing-amount"><h2>$99 <span>/monthly</span></h2><h6>What’s included</h6></div><div class="pricing-list"><ul><li>Profile Creation</li><li>Appointment Booking</li><li>Notification Alerts</li><li>Limited Telemedicine Access</li></ul></div><div class="pricing-btn"><a class="btn btn-primary" href="https://doccure.dreamstechnologies.com/react/template/pages/login-email" data-discover="true">Choose Plan</a></div></div></div></div></div><div class="col-lg-4 col-sm-12 aos aos-init" data-aos="fade-up"><div class="card pricing-card active"><div class="card-body"><div class="pricing-header"><div class="pricing-header-info"><div class="pricing-icon"><span><img alt="icon" src="./Doccure_files/price-icon2.svg"></span></div><div class="pricing-title"><h4>Pro</h4></div></div><div><span class="badge">Popular</span></div></div><div class="pricing-info"><div class="pricing-amount"><h2>$199 <span>/monthly</span></h2><h6>What’s included</h6></div><div class="pricing-list"><ul><li>Profile Creation</li><li>Appointment Booking</li><li>Notification Alerts</li><li>Extended Telemedicine Access</li><li>Exclusive Discounts</li><li>Appointment History</li><li>Priority Customer Support</li></ul></div><div class="pricing-btn"><a class="btn btn-primary" href="https://doccure.dreamstechnologies.com/react/template/pages/login-email" data-discover="true">Choose Plan</a></div></div></div></div></div><div class="col-lg-4 col-sm-12 aos aos-init" data-aos="fade-up"><div class="card pricing-card"><div class="card-body"><div class="pricing-header"><div class="pricing-header-info"><div class="pricing-icon"><span><img alt="icon" src="./Doccure_files/price-icon3.svg"></span></div><div class="pricing-title"><h4>Enterprise</h4></div></div></div><div class="pricing-info"><div class="pricing-amount"><h2>$399 <span>/monthly</span></h2><h6>What’s included</h6></div><div class="pricing-list"><ul><li>All Basic Plan Features</li><li>All Premium Plan Features</li><li>Personalized Health Insights</li><li>Family Account Management</li></ul></div><div class="pricing-btn"><a class="btn btn-primary" href="https://doccure.dreamstechnologies.com/react/template/pages/login-email" data-discover="true">Choose Plan</a></div></div></div></div></div></div></div></section><section class="work-section"><div class="container"><div class="row"><div class="col-lg-4 col-md-12 work-img-info aos aos-init aos-animate" data-aos="fade-up"><div class="work-img"><img class="img-fluid" alt="doctor-image" src="./Doccure_files/work-img.png"></div></div><div class="col-lg-8 col-md-12 work-details"><div class="section-header-one aos aos-init" data-aos="fade-up"><h5>How it Works</h5><h2 class="section-title">4 easy steps to get your solution</h2></div><div class="row"><div class="col-lg-6 col-md-6 aos aos-init" data-aos="fade-up"><div class="work-info"><div class="work-icon"><span><img alt="search-doctor-icon" src="./Doccure_files/work-01.svg"></span></div><div class="work-content"><h5>Search Doctor</h5><p>Search for a doctor based on specialization, location, or availability. </p></div></div></div><div class="col-lg-6 col-md-6 aos aos-init" data-aos="fade-up"><div class="work-info"><div class="work-icon"><span><img alt="doctor-profile-icon" src="./Doccure_files/work-02.svg"></span></div><div class="work-content"><h5>Check Doctor Profile</h5><p>Explore detailed doctor profiles on our platform to make informed healthcare decisions.</p></div></div></div><div class="col-lg-6 col-md-6 aos aos-init" data-aos="fade-up"><div class="work-info"><div class="work-icon"><span><img alt="calendar-icon" src="./Doccure_files/work-03.svg"></span></div><div class="work-content"><h5>Schedule Appointment</h5><p>After choose your preferred doctor, select a convenient time slot, &amp; confirm your appointment.</p></div></div></div><div class="col-lg-6 col-md-6 aos aos-init" data-aos="fade-up"><div class="work-info"><div class="work-icon"><span><img alt="solution-icon" src="./Doccure_files/work-04.svg"></span></div><div class="work-content"><h5>Get Your Solution</h5><p>Discuss your health concerns with the doctor and receive personalized advice &amp; solution.</p></div></div></div></div></div></div></div></section><section class="articles-section"><div class="container"><div class="row"><div class="col-md-12 aos aos-init" data-aos="fade-up"><div class="section-header-one text-center"><h2 class="section-title">Latest Articles</h2></div></div></div><div class="row"><div class="col-lg-6 col-md-6 d-flex aos aos-init" data-aos="fade-up"><div class="articles-grid w-100"><div class="articles-info"><div class="articles-left"><a href="https://doccure.dreamstechnologies.com/react/template/blog/blog-details" data-discover="true"><div class="articles-img"><img class="img-fluid" alt="John Doe" src="./Doccure_files/blog-11.jpg"></div></a></div><div class="articles-right"><div class="articles-content"><ul class="articles-list nav"><li><i class="feather icon-user"></i> John Doe</li><li><i class="feather icon-calendar"></i> 13 Aug, 2023</li></ul><h4><a href="https://doccure.dreamstechnologies.com/react/template/blog/blog-details" data-discover="true">Navigating Telehealth: A Guide to Virtual Healthcare Visits</a></h4><p>Explore the benefits &amp; challenges of virtual healthcare appointments, along with tips for making good health.</p><a class="btn btn-primary" href="https://doccure.dreamstechnologies.com/react/template/blog/blog-details" data-discover="true">Read More</a></div></div></div></div></div><div class="col-lg-6 col-md-6 d-flex aos aos-init" data-aos="fade-up"><div class="articles-grid w-100"><div class="articles-info"><div class="articles-left"><a href="https://doccure.dreamstechnologies.com/react/template/blog/blog-details" data-discover="true"><div class="articles-img"><img class="img-fluid" alt="Darren Elder" src="./Doccure_files/blog-24.jpg"></div></a></div><div class="articles-right"><div class="articles-content"><ul class="articles-list nav"><li><i class="feather icon-user"></i> Darren Elder</li><li><i class="feather icon-calendar"></i> 10 Sep, 2023</li></ul><h4><a href="https://doccure.dreamstechnologies.com/react/template/blog/blog-details" data-discover="true">Work-Life Harmony: Balancing Career and Personal Wellness</a></h4><p>Uncover strategies to achieve a harmonious balance between professional commitments and personal well-being.</p><a class="btn btn-primary" href="https://doccure.dreamstechnologies.com/react/template/blog/blog-details" data-discover="true">Read More</a></div></div></div></div></div><div class="col-lg-6 col-md-6 d-flex aos aos-init" data-aos="fade-up"><div class="articles-grid w-100"><div class="articles-info"><div class="articles-left"><a href="https://doccure.dreamstechnologies.com/react/template/blog/blog-details" data-discover="true"><div class="articles-img"><img class="img-fluid" alt="Ruby Perrin" src="./Doccure_files/blog-25.jpg"></div></a></div><div class="articles-right"><div class="articles-content"><ul class="articles-list nav"><li><i class="feather icon-user"></i> Ruby Perrin</li><li><i class="feather icon-calendar"></i> 30 Oct, 2023</li></ul><h4><a href="https://doccure.dreamstechnologies.com/react/template/blog/blog-details" data-discover="true">Sleep Solutions: Unveiling the Secrets to a Restful Night</a></h4><p>Explore importance of quality sleep &amp; learn tips to improve your sleep, ensuring you wake up refreshed &amp; ready to face the day.</p><a class="btn btn-primary" href="https://doccure.dreamstechnologies.com/react/template/blog/blog-details" data-discover="true">Read More</a></div></div></div></div></div><div class="col-lg-6 col-md-6 d-flex aos aos-init" data-aos="fade-up"><div class="articles-grid w-100"><div class="articles-info"><div class="articles-left"><a href="https://doccure.dreamstechnologies.com/react/template/blog/blog-details" data-discover="true"><div class="articles-img"><img class="img-fluid" alt="Sofia Brient" src="./Doccure_files/blog-12.jpg"></div></a></div><div class="articles-right"><div class="articles-content"><ul class="articles-list nav"><li><i class="feather icon-user"></i> Sofia Brient</li><li><i class="feather icon-calendar"></i> 08 Nov, 2023</li></ul><h4><a href="https://doccure.dreamstechnologies.com/react/template/blog/blog-details" data-discover="true">Mental Wellness in a Digital Age: Strategies for a Healthy Mind Online</a></h4><p>Delve into the impact of digital life on mental health &amp; discover practical strategies to maintain mental well-being.</p><a class="btn btn-primary" href="https://doccure.dreamstechnologies.com/react/template/blog/blog-details" data-discover="true">Read More</a></div></div></div></div></div></div></div></section><section class="app-section pt-0"><div class="container"><div class="app-bg"><div class="row align-items-end"><div class="col-lg-6 col-md-12"><div class="app-content"><div class="app-header aos aos-init" data-aos="fade-up"><h5>Working for Your Better Health.</h5><h2>Download the Doccure App today!</h2></div><div class="app-scan aos aos-init" data-aos="fade-up"><p>Scan the QR code to get the app now</p><img alt="scan-image" src="./Doccure_files/scan-img.png"></div><div class="google-imgs aos aos-init" data-aos="fade-up"><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><img alt="img" src="./Doccure_files/google-play-icon.svg"></a><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><img alt="img" src="./Doccure_files/app-store-icon.svg"></a></div></div></div><div class="col-lg-6 col-md-12 aos aos-init" data-aos="fade-up"><div class="mobile-img"><img class="img-fluid" alt="img" src="./Doccure_files/mobile-img.png"></div></div></div></div></div></section><section class="faq-section"><div class="container"><div class="row"><div class="col-md-12"><div class="section-header-one aos aos-init" data-aos="fade-up"><h5>Get Your Answer</h5><h2 class="section-title">Frequently Asked Questions</h2></div></div></div><div class="row align-items-center"><div class="col-lg-6 col-md-12 aos aos-init" data-aos="fade-up"><div class="faq-img"><img class="img-fluid" alt="img" src="./Doccure_files/faq-img.png"><div class="faq-patients-count"><div class="faq-smile-img"><img alt="icon" src="./Doccure_files/smiling-icon.svg"></div><div class="faq-patients-content"><h4><span class="count-digit">95</span>k+</h4><p>Happy Patients</p></div></div></div></div><div class="col-lg-6 col-md-12"><div class="faq-info aos aos-init" data-aos="fade-up"><div class="accordion" id="faq-details"><div class="accordion-item"><h2 class="accordion-header" id="headingOne"><a class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true">How do I book an appointment with a doctor?</a></h2><div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faq-details"><div class="accordion-body"><div class="accordion-content"><p>Yes, simply visit our website and log in or create an account. Search for a doctor based on specialization, location, or availability &amp; confirm your booking.</p></div></div></div></div><div class="accordion-item"><h2 class="accordion-header" id="headingTwo"><a class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true">Can I request a specific doctor when booking my appointment?</a></h2><div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faq-details"><div class="accordion-body"><div class="accordion-content"><p>Yes, you can usually request a specific doctor when booking your appointment, though availability may vary based on their schedule.</p></div></div></div></div><div class="accordion-item"><h2 class="accordion-header" id="headingThree"><a class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true">What should I do if I need to cancel or reschedule my appointment?</a></h2><div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faq-details"><div class="accordion-body"><div class="accordion-content"><p>If you need to cancel or reschedule your appointment, contact the doctor as soon as possible to inform them and to reschedule for another available time slot.</p></div></div></div></div><div class="accordion-item"><h2 class="accordion-header" id="headingFour"><a class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true">What if I'm running late for my appointment?</a></h2><div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faq-details"><div class="accordion-body"><div class="accordion-content"><p>If you know you will be late, it's courteous to call the doctor's office and inform them. Depending on their policy and schedule, they may be able to accommodate you or reschedule your appointment.</p></div></div></div></div><div class="accordion-item"><h2 class="accordion-header" id="headingFive"><a class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true">Can I book appointments for family members or dependents?</a></h2><div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faq-details"><div class="accordion-body"><div class="accordion-content"><p>Yes, in many cases, you can book appointments for family members or dependents. However, you may need to provide their personal information and consent to do so.</p></div></div></div></div></div></div></div></div></div></section><section class="testimonial-section"><div class="container"><div class="row"><div class="col-md-12"><div class="testimonial-slider slick"><div class="slick-slider slick-initialized" dir="ltr"><button type="button" data-role="none" class="slick-arrow slick-prev" style="display: block;"> Previous</button><div class="slick-list"><div class="slick-track" style="width: 1540px; opacity: 1; transform: translate3d(-220px, 0px, 0px);"><div data-index="-1" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 220px;"><div><div class="testimonial-grid" tabindex="-1" style="width: 100%; display: inline-block;"><div class="testimonial-info"><div class="testimonial-img"><img class="img-fluid" alt="Betty Carlson" src="./Doccure_files/client-11.jpg"></div><div class="testimonial-content"><div class="section-header section-inner-header testimonial-header"><h5>Testimonials</h5><h2>What Our Client Says</h2></div><div class="testimonial-details"><p>As a parent, coordinating doctor appointments for my family can be overwhelming. Doccure has simplified the process and made scheduling appointments a breeze! I love being able to see all available appointment times in one place and book appointments for multiple family members with ease. Plus, the automatic reminders ensure we never miss an appointment. I highly recommend Doccure to other busy parents!</p><h6><span class="d-block">Niya Patel</span> New York</h6></div></div></div></div></div></div><div data-index="0" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline: none; width: 220px;"><div><div class="testimonial-grid" tabindex="-1" style="width: 100%; display: inline-block;"><div class="testimonial-info"><div class="testimonial-img"><img class="img-fluid" alt="John Doe" src="./Doccure_files/client-01.jpg"></div><div class="testimonial-content"><div class="section-header-one section-header section-inner-header testimonial-header"><h5>Testimonials</h5><h2 class="section-title">What Our Client Says</h2></div><div class="testimonial-details"><p>Doccure exceeded my expectations in healthcare. The seamless booking process, coupled with the expertise of the doctors, made my experience exceptional. Their commitment to quality care and convenience truly sets them apart. I highly recommend Doccure for anyone seeking reliable and accessible healthcare services.</p><h6><span class="d-block">John Doe</span> New York</h6></div></div></div></div></div></div><div data-index="1" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 220px;"><div><div class="testimonial-grid" tabindex="-1" style="width: 100%; display: inline-block;"><div class="testimonial-info"><div class="testimonial-img"><img class="img-fluid" alt="Amanda Warren" src="./Doccure_files/client-03.jpg"></div><div class="testimonial-content"><div class="section-header section-inner-header testimonial-header"><h5>Testimonials</h5><h2>What Our Client Says</h2></div><div class="testimonial-details"><p>As a busy professional, I don't have time to wait on hold or play phone tag to schedule doctor appointments. Thanks to Doccure, booking appointments has never been easier! The user-friendly interface allows me to quickly find available appointment slots that fit my schedule and book them with just a few clicks. It's a game-changer for anyone looking to streamline their healthcare management.</p><h6><span class="d-block">Andrew Denner</span> Nevada</h6></div></div></div></div></div></div><div data-index="2" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 220px;"><div><div class="testimonial-grid" tabindex="-1" style="width: 100%; display: inline-block;"><div class="testimonial-info"><div class="testimonial-img"><img class="img-fluid" alt="Betty Carlson" src="./Doccure_files/client-11.jpg"></div><div class="testimonial-content"><div class="section-header section-inner-header testimonial-header"><h5>Testimonials</h5><h2>What Our Client Says</h2></div><div class="testimonial-details"><p>As a parent, coordinating doctor appointments for my family can be overwhelming. Doccure has simplified the process and made scheduling appointments a breeze! I love being able to see all available appointment times in one place and book appointments for multiple family members with ease. Plus, the automatic reminders ensure we never miss an appointment. I highly recommend Doccure to other busy parents!</p><h6><span class="d-block">Niya Patel</span> New York</h6></div></div></div></div></div></div><div data-index="3" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 220px;"><div><div class="testimonial-grid" tabindex="-1" style="width: 100%; display: inline-block;"><div class="testimonial-info"><div class="testimonial-img"><img class="img-fluid" alt="John Doe" src="./Doccure_files/client-01.jpg"></div><div class="testimonial-content"><div class="section-header-one section-header section-inner-header testimonial-header"><h5>Testimonials</h5><h2 class="section-title">What Our Client Says</h2></div><div class="testimonial-details"><p>Doccure exceeded my expectations in healthcare. The seamless booking process, coupled with the expertise of the doctors, made my experience exceptional. Their commitment to quality care and convenience truly sets them apart. I highly recommend Doccure for anyone seeking reliable and accessible healthcare services.</p><h6><span class="d-block">John Doe</span> New York</h6></div></div></div></div></div></div><div data-index="4" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 220px;"><div><div class="testimonial-grid" tabindex="-1" style="width: 100%; display: inline-block;"><div class="testimonial-info"><div class="testimonial-img"><img class="img-fluid" alt="Amanda Warren" src="./Doccure_files/client-03.jpg"></div><div class="testimonial-content"><div class="section-header section-inner-header testimonial-header"><h5>Testimonials</h5><h2>What Our Client Says</h2></div><div class="testimonial-details"><p>As a busy professional, I don't have time to wait on hold or play phone tag to schedule doctor appointments. Thanks to Doccure, booking appointments has never been easier! The user-friendly interface allows me to quickly find available appointment slots that fit my schedule and book them with just a few clicks. It's a game-changer for anyone looking to streamline their healthcare management.</p><h6><span class="d-block">Andrew Denner</span> Nevada</h6></div></div></div></div></div></div><div data-index="5" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 220px;"><div><div class="testimonial-grid" tabindex="-1" style="width: 100%; display: inline-block;"><div class="testimonial-info"><div class="testimonial-img"><img class="img-fluid" alt="Betty Carlson" src="./Doccure_files/client-11.jpg"></div><div class="testimonial-content"><div class="section-header section-inner-header testimonial-header"><h5>Testimonials</h5><h2>What Our Client Says</h2></div><div class="testimonial-details"><p>As a parent, coordinating doctor appointments for my family can be overwhelming. Doccure has simplified the process and made scheduling appointments a breeze! I love being able to see all available appointment times in one place and book appointments for multiple family members with ease. Plus, the automatic reminders ensure we never miss an appointment. I highly recommend Doccure to other busy parents!</p><h6><span class="d-block">Niya Patel</span> New York</h6></div></div></div></div></div></div></div></div><button type="button" data-role="none" class="slick-arrow slick-next" style="display: block;"> Next</button></div></div></div></div></div></section><section class="partners-section"><div class="container"><div class="row"><div class="col-md-12"><div class="section-header-one text-center aos aos-init" data-aos="fade-up"><h2 class="section-title">Our Partners</h2></div></div></div><div class="partners-info aos aos-init" data-aos="fade-up"><ul class="partners-slider slick-margins"><div class="slick-slider slick-initialized" dir="ltr"><div class="slick-list"><div class="slick-track" style="width: 3172px; opacity: 1; transform: translate3d(-366px, 0px, 0px);"><div data-index="-2" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 122px;"><div><li tabindex="-1" style="width: 100%; display: inline-block;"><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><img class="img-fluid" alt="partners" src="./Doccure_files/partners-5.svg"></a></li></div></div><div data-index="-1" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 122px;"><div><li tabindex="-1" style="width: 100%; display: inline-block;"><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><img class="img-fluid" alt="partners" src="./Doccure_files/partners-6.svg"></a></li></div></div><div data-index="0" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 122px;"><div><li tabindex="-1" style="width: 100%; display: inline-block;"><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><img class="img-fluid" alt="partners" src="./Doccure_files/partners-1.svg"></a></li></div></div><div data-index="1" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline: none; width: 122px;"><div><li tabindex="-1" style="width: 100%; display: inline-block;"><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><img class="img-fluid" alt="partners" src="./Doccure_files/partners-2.svg"></a></li></div></div><div data-index="2" class="slick-slide slick-active" tabindex="-1" aria-hidden="false" style="outline: none; width: 122px;"><div><li tabindex="-1" style="width: 100%; display: inline-block;"><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><img class="img-fluid" alt="partners" src="./Doccure_files/partners-3.svg"></a></li></div></div><div data-index="3" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 122px;"><div><li tabindex="-1" style="width: 100%; display: inline-block;"><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><img class="img-fluid" alt="partners" src="./Doccure_files/partners-4.svg"></a></li></div></div><div data-index="4" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 122px;"><div><li tabindex="-1" style="width: 100%; display: inline-block;"><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><img class="img-fluid" alt="partners" src="./Doccure_files/partners-5.svg"></a></li></div></div><div data-index="5" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 122px;"><div><li tabindex="-1" style="width: 100%; display: inline-block;"><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><img class="img-fluid" alt="partners" src="./Doccure_files/partners-6.svg"></a></li></div></div><div data-index="6" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 122px;"><div><li tabindex="-1" style="width: 100%; display: inline-block;"><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><img class="img-fluid" alt="partners" src="./Doccure_files/partners-1.svg"></a></li></div></div><div data-index="7" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 122px;"><div><li tabindex="-1" style="width: 100%; display: inline-block;"><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><img class="img-fluid" alt="partners" src="./Doccure_files/partners-2.svg"></a></li></div></div><div data-index="8" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 122px;"><div><li tabindex="-1" style="width: 100%; display: inline-block;"><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><img class="img-fluid" alt="partners" src="./Doccure_files/partners-3.svg"></a></li></div></div><div data-index="9" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 122px;"><div><li tabindex="-1" style="width: 100%; display: inline-block;"><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><img class="img-fluid" alt="partners" src="./Doccure_files/partners-4.svg"></a></li></div></div><div data-index="10" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 122px;"><div><li tabindex="-1" style="width: 100%; display: inline-block;"><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><img class="img-fluid" alt="partners" src="./Doccure_files/partners-5.svg"></a></li></div></div><div data-index="11" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 122px;"><div><li tabindex="-1" style="width: 100%; display: inline-block;"><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><img class="img-fluid" alt="partners" src="./Doccure_files/partners-6.svg"></a></li></div></div><div data-index="12" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 122px;"><div><li tabindex="-1" style="width: 100%; display: inline-block;"><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><img class="img-fluid" alt="partners" src="./Doccure_files/partners-1.svg"></a></li></div></div><div data-index="13" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 122px;"><div><li tabindex="-1" style="width: 100%; display: inline-block;"><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><img class="img-fluid" alt="partners" src="./Doccure_files/partners-2.svg"></a></li></div></div><div data-index="14" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 122px;"><div><li tabindex="-1" style="width: 100%; display: inline-block;"><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><img class="img-fluid" alt="partners" src="./Doccure_files/partners-3.svg"></a></li></div></div><div data-index="15" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 122px;"><div><li tabindex="-1" style="width: 100%; display: inline-block;"><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><img class="img-fluid" alt="partners" src="./Doccure_files/partners-4.svg"></a></li></div></div><div data-index="16" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 122px;"><div><li tabindex="-1" style="width: 100%; display: inline-block;"><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><img class="img-fluid" alt="partners" src="./Doccure_files/partners-5.svg"></a></li></div></div><div data-index="17" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 122px;"><div><li tabindex="-1" style="width: 100%; display: inline-block;"><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><img class="img-fluid" alt="partners" src="./Doccure_files/partners-6.svg"></a></li></div></div><div data-index="18" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 122px;"><div><li tabindex="-1" style="width: 100%; display: inline-block;"><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><img class="img-fluid" alt="partners" src="./Doccure_files/partners-1.svg"></a></li></div></div><div data-index="19" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 122px;"><div><li tabindex="-1" style="width: 100%; display: inline-block;"><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><img class="img-fluid" alt="partners" src="./Doccure_files/partners-2.svg"></a></li></div></div><div data-index="20" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 122px;"><div><li tabindex="-1" style="width: 100%; display: inline-block;"><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><img class="img-fluid" alt="partners" src="./Doccure_files/partners-3.svg"></a></li></div></div><div data-index="21" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 122px;"><div><li tabindex="-1" style="width: 100%; display: inline-block;"><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><img class="img-fluid" alt="partners" src="./Doccure_files/partners-4.svg"></a></li></div></div><div data-index="22" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 122px;"><div><li tabindex="-1" style="width: 100%; display: inline-block;"><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><img class="img-fluid" alt="partners" src="./Doccure_files/partners-5.svg"></a></li></div></div><div data-index="23" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 122px;"><div><li tabindex="-1" style="width: 100%; display: inline-block;"><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><img class="img-fluid" alt="partners" src="./Doccure_files/partners-6.svg"></a></li></div></div></div></div></div></ul></div></div></section> <footer class="footer footer-one"><div class="footer-top aos aos-init" data-aos="fade-up"><div class="container"><div class="row"><div class="col-lg-3 col-md-4"><div class="footer-widget footer-about"><div class="footer-logo"><a href="https://doccure.dreamstechnologies.com/react/template/index" data-discover="true"><img alt="logo" src="./Doccure_files/logo.svg"></a></div><div class="footer-about-content"><p>Effortlessly schedule your medical appointments with Doccure. Connect with healthcare professionals, manage appointments &amp; prioritize your well being </p></div></div></div><div class="col-lg-6"><div class="row"><div class="col-lg-3 col-md-4"><div class="footer-widget footer-menu"><h2 class="footer-title">Company</h2><ul><li><a href="https://doccure.dreamstechnologies.com/react/template/index" data-discover="true">Home</a></li><li><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true">Specialities</a></li><li><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true">Video Consult</a></li></ul></div></div><div class="col-lg-3 col-md-4"><div class="footer-widget footer-menu"><h2 class="footer-title">Specialities</h2><ul><li><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true">Neurology</a></li><li><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true">Cardiologist</a></li><li><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true">Dentist</a></li></ul></div></div><div class="col-lg-6 col-md-4"><div class="footer-widget footer-contact"><h2 class="footer-title">Contact Us</h2><div class="footer-contact-info"><div class="footer-address"><p><i class="isax isax-location"></i> 3556 Beech Street, USA</p></div><div class="footer-address"><p><i class="feather-phone-call"></i> +1 315 369 5943</p></div><div class="footer-address mb-0"><p><i class="feather-mail"></i> doccure@example.com</p></div></div></div></div></div></div><div class="col-lg-3 col-md-7"><div class="footer-widget"><h2 class="footer-title">Join Our Newsletter</h2><div class="subscribe-form"><form action="https://doccure.dreamstechnologies.com/react/template/home-1#"><input class="form-control" placeholder="Enter Email" type="email"><button type="submit" class="btn">Submit</button></form></div><div class="social-icon"><ul><li><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><i class="fa-brands fa-facebook"></i></a></li><li><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><i class="fa-brands fa-x-twitter"></i></a></li><li><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><i class="fa-brands fa-instagram"></i></a></li><li><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><i class="fa-brands fa-linkedin"></i></a></li><li><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true"><i class="fa-brands fa-pinterest"></i></a></li></ul></div></div></div></div></div></div><div class="footer-bottom"><div class="container"><div class="copyright"><div class="row"><div class="col-md-6 col-lg-6"><div class="copyright-text"><p class="mb-0">Copyright © 2025 Doccure. All Rights Reserved</p></div></div><div class="col-md-6 col-lg-6"><div class="copyright-menu"><ul class="policy-menu"><li><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true">Privacy Policy</a></li><li><a href="https://doccure.dreamstechnologies.com/react/template/home-1" data-discover="true">Terms and Conditions</a></li></ul></div></div></div></div></div></div></footer><div class="progress-wrap active-progress"><svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102"><path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 10980px, 10980px; stroke-dashoffset: 10952.3px;"></path></svg></div><div class="mouse-cursor cursor-outer " style="visibility: visible; transform: translate(1264px, 671px);"></div><div class="mouse-cursor cursor-inner " style="visibility: visible; transform: translate(1264px, 671px);"></div></div></div><div class="sidebar-overlay"></div></div></div>
+
+  <script defer="" src="./Doccure_files/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;3ca157e612a14eccbb30cf6db6691c29&quot;,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+
+
+</body></html>

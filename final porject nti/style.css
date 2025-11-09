@@ -1,0 +1,1173 @@
+/* الألوان الأساسية */
+:root {
+    --doccure-blue: #007bff; /* لون أساسي أزرق */
+    --doccure-light-blue: #e8f0fe; /* لون خفيف للخلفيات */
+    --doccure-text-color: #555;
+    --doccure-dark-text: #333;
+    --doccure-border-color: #ddd;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* خلفية خفيفة للجسم */
+}
+
+/* ------------------ Navbar Styling ------------------ */
+.doccure-navbar {
+    background-color: white;
+    border-bottom: 1px solid var(--doccure-border-color);
+    padding: 0.75rem 0;
+}
+
+.doccure-container {
+    max-width: 90%; /* لتقليل المسافة من الجوانب قليلاً */
+}
+
+.doccure-logo {
+    height: 30px; /* حجم اللوجو */
+    margin-right: 5px;
+}
+
+.logo-text {
+    font-weight: bold;
+    color: var(--doccure-dark-text);
+}
+
+.doccure-nav-links .nav-link {
+    color: var(--doccure-text-color);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+/* تأثير الـ Hover على عناصر الناف بار */
+.doccure-nav-links .nav-link:hover,
+.doccure-nav-links .nav-link.active,
+.doccure-nav-links .dropdown-item:hover {
+    color: var(--doccure-blue) !important;
+}
+
+/* تنسيق أزرار الـ Register والـ Login */
+.doccure-btn-register {
+    background-color: transparent;
+    color: var(--doccure-text-color);
+    border: 1px solid var(--doccure-border-color);
+    padding: 0.5rem 1.25rem;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.doccure-btn-register:hover {
+    background-color: var(--doccure-light-blue);
+    color: var(--doccure-blue);
+    border-color: var(--doccure-blue);
+}
+
+.doccure-btn-login {
+    background-color: var(--doccure-blue);
+    color: white;
+    border: 1px solid var(--doccure-blue);
+    padding: 0.5rem 1.25rem;
+    border-radius: 4px;
+    transition: all 0.4s;
+}
+
+.doccure-btn-login:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* ------------------ Hero Section Styling ------------------ */
+
+.doccure-hero-section {
+    position: relative;
+    padding: 80px 0;
+    background-color: #fff;
+    overflow: hidden; /* لإخفاء أي جزء من الصورة يخرج عن نطاق القسم */
+}
+
+/* خلفية صورة الطبيبة */
+.hero-visual-area {
+    /* هنا حط رابط صورة الطبيبة */
+    background: url('./image/banner-img.png') no-repeat right center; 
+    background-size: contain; /* لتظهر الصورة بالكامل على اليمين */
+    height: 600px; /* لضمان وجود مساحة كافية للخلفية */
+}
+
+@media (max-width: 991px) {
+    .hero-visual-area {
+        height: 350px;
+        background-position: center bottom;
+    }
+}
+
+/* تنسيق المحتوى */
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--doccure-dark-text);
+}
+
+.hero-content p {
+    color: var(--doccure-text-color);
+}
+
+.doccure-btn-consult {
+background-image: linear-gradient(90.08deg, #0e82fd .09%, #06aed4 70.28%) !important;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 25px;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.doccure-btn-consult:hover {
+    background-color: #0056b3;
+}
+
+/* صورة السهم */
+.hero-arrow-image{
+    position: absolute;
+    top: 1px; /* لضبط مكانها بالنسبة لزر الـ Consult */
+    left: 170px;
+    width: 160px; /* حجم مناسب للسهم */
+}
+
+/* Search Form Styling */
+.doccure-search-form .input-group {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.doccure-input {
+    border: 1px solid var(--doccure-border-color);
+    border-radius: 4px;
+    padding: 0.75rem 1rem;
+    color: var(--doccure-text-color);
+}
+
+.doccure-input::placeholder {
+    color: var(--doccure-text-color);
+}
+.doccure-btn-register {
+    background-color:rgb(12, 32, 58);
+    color: #ddd;
+
+}
+
+.doccure-btn-search {
+   background-image: linear-gradient(90.08deg, #0e82fd .09%, #06aed4 70.28%) !important;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 44px !important;
+    border: none;
+    transition: background-color 0.3s;
+}
+.doccure-btn-search:hover {
+ background-image: linear-gradient(to right, rgb(203, 203, 216) , rgb(0, 0, 0));
+}
+
+/* ------------------ Animated Elements Styling ------------------ */
+
+.doccure-animated-element {
+    position: absolute;
+    z-index: 10;
+    background-color: white;
+    padding: 11px;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Checkup Toggle Box */
+.doccure-checkup-toggle {
+    top: 200px;
+    right: 400px; /* مكان تقريبي ليظهر في مكانه على الصورة */
+    padding: 10px 15px;
+    /* لإلغاء تأثير الـ Shadow على الـ Toggle الظاهر في الصورة */
+  
+
+    background-color: white;
+}
+
+/* Doctor Info Card */
+.doccure-doctor-card {
+    top: 280px;
+    right: 2px; /* مكان تقريبي ليظهر في مكانه على الصورة */
+    padding: 15px;
+    background-color: white;
+}
+.doccure-doctor-card .btn-primary {
+    background-color: var(--doccure-blue);
+    border-color: var(--doccure-blue);
+    padding: 0.25rem 0.5rem;
+}
+
+
+/* Meet Our Doctors Box */
+.doccure-meet-doctors-box {
+    position: absolute;
+    bottom: 50px;
+    right: 220px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.doccure-doctor-avatars {
+    display: flex;
+}
+
+.doc-avatar {
+  
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+}
+.doc-avatar:first-child {
+    margin-left: 0;
+}
+
+
+/* ------------------ Animation (الحركة لأعلى ولأسفل) ------------------ */
+
+/* تعريف الحركة (Keyframes) */
+@keyframes float-up-down {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); } /* تتحرك 5 بكسل لأعلى */
+    100% { transform: translateY(2); }
+}
+
+/* تطبيق الحركة بهدوء */
+.move-up-down {
+    animation: float-up-down 3s ease-in-out infinite; /* 3 ثواني ببطء وتكرار لا نهائي */
+}
+
+/* حركة أبطأ قليلاً */
+.move-up-down-slow {
+    animation: float-up-down 4s ease-in-out infinite; /* 4 ثواني ببطء أكثر */
+}
+/* تنسيق عام للخلايا التي تحتوي على 7 أيقونات لتوزيعها بالتساوي */
+.icon-col {
+    flex: 0 0 auto;
+    width: 14.28%; /* 100% / 7 = 14.28% */
+}
+/* ------------------------------------------- */
+/* تنسيقات قسم الأيقونات السبع (الخدمات العلوية) */
+/* ------------------------------------------- */
+
+/* تنسيق عام للخلايا التي تحتوي على 7 أيقونات لتوزيعها بالتساوي */
+.icon-col {
+    flex: 0 0 auto;
+    width: 14.28%; /* 100% / 7 = 14.28% */
+}
+
+/* تنسيق كروت الأيقونات العلوية */
+.custom-icon-card {
+    text-align: center;
+    padding: 15px 5px;  
+    border: 8px;
+    background-color: transparent;
+    min-height: 120px;  
+    border: 1px solid #e0e0e0;
+}
+
+/* تنسيق الدوائر التي تحوي الأيقونات العلوية */
+.custom-icon-circle {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    border-radius: 3%;
+}
+
+/* حجم الصورة داخل الدائرة العلوية */
+.icon-img {
+    width: 100px;  
+    height: 25px;
+ 
+}
+
+/* ألوان الخلفية المخصصة للأيقونات العلوية */
+.color-1 { background-color: lightslategray; border: 1px solid #d3d3d3; }
+ .color-2{ background-color: lightslategray; border: 1px solid #d3d3d3}
+ .color-3 { background-color: lightslategray; border: 1px solid #d3d3d3}
+ .color-4 { background-color: lightslategray; border: 1px solid #d3d3d3}
+ .color-5 { background-color: lightslategray; border: 1px solid #d3d3d3}
+.color-6{ background-color: lightslategray; border: 1px solid #d3d3d3}
+.color-7 { background-color: lightslategray; border: 1px solid #d3d3d3}
+
+
+/* ------------------------------------------- */
+/* تنسيقات قسم Specialities والكاروسيل */
+/* ------------------------------------------- */
+
+/* تثبيت العنوان وصورة البلس على أقصى اليسار في RTL */
+.specialities-title {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    /* هذا يدفع العنوان إلى أقصى اليسار (النهاية) */
+    margin-inline-end: auto; 
+    margin-inline-start: 0; 
+}
+
+/* تنسيق صورة البلس */
+.plus-icon {
+    width: 24px;
+    height: 24px;
+    /* المسافة بين النص والصورة في اتجاه RTL */
+    margin-inline-start: 5px; 
+}
+
+/* تنسيق كروت التخصصات */
+.speciality-card {
+    text-align: center;
+    padding: 20px 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #ffffff;
+    width: 100%;
+    height: 120px;  
+    margin: 0 auto;  
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* ظل خفيف */
+}
+
+/* تنسيق الدوائر التي تحوي أيقونات التخصصات */
+.speciality-icon-circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 5px;
+    /* لون الخلفية والتظليل لكرت التخصصات */
+    background-color: #e0f2f7; /* أزرق سماوي فاتح */
+    border: 1px solid #d0e0e0;
+}
+
+.speciality-icon-circle img {
+    width: 30px;  
+    height: 30px;
+}
+
+/* ------------------------------------------- */
+/* تنسيقات أزرار التحكم في الكاروسيل */
+/* ------------------------------------------- */
+
+/* تثبيت الأزرار على أقصى اليمين في RTL */
+.carousel-controls {
+    display: flex;
+    align-items: center;
+    /* هذا يدفع الأزرار إلى أقصى اليمين (البداية) */
+    margin-inline-start: auto; 
+    margin-inline-end: 0; 
+}
+
+/* تنسيق شكل الأزرار */
+.carousel-control-icon {
+    color: #888;  
+    font-size: 1.5rem;  
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    padding: 5px 10px;
+    /* المسافة بين السهمين */
+    margin-inline-start: 10px;  
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px; 
+    height: 35px; 
+    line-height: 1; 
+}
+
+/* إخفاء أزرار التحكم الافتراضية للكاروسيل إذا لم تكن تستخدمها */
+.carousel-control-prev, .carousel-control-next {
+    display: none !important;
+}
+
+/* ====== الشكل الأساسي للكروت ====== */
+.pricing-card {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  
+  overflow: hidden;
+}
+
+/* تأثير ارتفاع خفيف لما أهوفر */
+.pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* الأيقونة جوه دايرة بيضا */
+.pricing-card .pricing-icon span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background: #fff;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+}
+
+/* الصورة جوا الدايرة */
+.pricing-card .pricing-icon img {
+  width: 36px;
+  height: 36px;
+  transition: all 0.3s ease;
+}
+
+/* لما أهوفر على الكارت كله */
+.pricing-card:hover .pricing-icon span {
+  background: #0d6efd; /* أزرق */
+}
+
+.pricing-card:hover .pricing-icon img {
+  filter: brightness(0) invert(1); /* الأيقونة تبقى بيضا */
+}
+
+/* ====== الكارت اللي في النص (ثابت) ====== */
+.pricing-card.active {
+  background: #0d6efd;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* خليه أطول شوية */
+.pricing-card.active .card-body {
+  padding: 70px 25px;
+}
+
+/* الباقيين العاديين */
+.pricing-card .card-body {
+  padding: 55px 25px;
+}
+
+/* النصوص جوه الكارت الأزرق */
+.pricing-card.active h4,
+.pricing-card.active h2,
+.pricing-card.active h6,
+.pricing-card.active li {
+  color: #fff;
+}
+
+/* الأيقونة ف الكارت الأزرق */
+.pricing-card.active .pricing-icon span {
+  background: #fff;
+}
+
+.pricing-card.active .pricing-icon img {
+  filter: none;
+}
+
+/* لما أهوفر على كارت عادي يتحول للأزرق */
+.pricing-card:hover {
+  background: #0d6efd;
+  color: #fff;
+  border-color: #0d6efd;
+}
+
+.pricing-card:hover h4,
+.pricing-card:hover h2,
+.pricing-card:hover h6,
+.pricing-card:hover li {
+  color: #fff;
+}
+/* ===== زرار Choose Plan ===== */
+.pricing-card .pricing-btn .btn {
+  display: inline-block;
+  width: 100%;
+  font-weight: 600;              /* يخلي الخط عريض */
+  padding: 10px 0;
+  border-radius: 20px;
+  border: 2px solid #ffffff;
+  background: transparent;
+  color: #0d6efd;
+  transition: all 0.3s ease;
+}
+
+/* لما أهوفر على الزرار نفسه */
+.pricing-card .pricing-btn .btn:hover {
+background-image: linear-gradient(90.08deg, #0e82fd .09%, #06aed4 70.28%) !important;
+  color: #fff;
+  border-color: #0d6efd;
+  transform: translateY(-2px);
+}
+
+/* لما أهوفر على الكارت كله، الزرار كمان يتغيّر */
+.pricing-card:hover .pricing-btn .btn {
+  background: #fff;
+  color: #0d6efd;
+  border-color: #fff;
+}
+
+/* الزرار جوه الكارت الأزرق (Pro) */
+.pricing-card.active .pricing-btn .btn {
+  background-image: linear-gradient(90.08deg, #0e82fd .09%, #06aed4 70.28%) !important;
+  color: #ffffff;
+  border-color: #fff;
+}
+
+/* لما أهوفر على الكارت الأزرق نفسه، يدي تأثير عكسي للزرار */
+.pricing-card.active:hover .pricing-btn .btn {
+  background: transparent;
+  color: #fff;
+  border-color: #fff;
+}   
+/* ===== Reset small bits for this demo (optional) ===== */
+* { box-sizing: border-box; }
+body { font-family: Inter, system-ui, Arial, sans-serif; margin: 0; padding: 0; color:#213242; }
+
+/* ===== Section layout ===== */
+.how-section {
+    width: 80%;
+  padding: 90px 90px;
+  background: #f8fafc;
+  position: relative;
+  overflow: visible;
+}
+
+
+
+/* container */
+.how-inner {
+  max-width: 100%;
+  margin: 5% auto;
+  display: grid;
+  grid-template-columns: 430px 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* LEFT - hero image with circular background */
+.how-left { position: relative; display:flex; justify-content:center; align-items:center; }
+.hero-circle {
+  position: absolute;
+  height: 360px;
+  border-radius: 50%;
+  
+ 
+}
+.hero-img {
+  width: 700px;
+
+  position: relative;
+  z-index: 2;
+
+  object-fit: cover;
+}
+
+/* RIGHT area heading */
+.how-right .how-head h5 {
+  margin: 10px 0 6px 0;
+ color: #007bff;
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+}
+.how-right .how-head h2 {
+  margin: 0 0 18px 0;
+  font-size: 28px;
+  color: #21375c;
+  font-weight: 700;
+}
+
+/* Steps grid (2 columns) */
+.steps-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* hide the radio inputs visually but keep accessible */
+.step-input { position: absolute; opacity: 0; pointer-events: none; }
+
+/* card label styling */
+.step-card {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  background: #fff;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(19,34,58,0.06);
+  cursor: pointer;
+  transition: transform 0.28s ease, background 0.28s ease, box-shadow 0.28s ease;
+  user-select: none;
+}
+
+/* raise on hover */
+.step-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(14,30,60,0.06);
+}
+
+/* icon wrapper (white circle background behind icon image) */
+.icon-wrap { flex: 0 0 64px; display:flex; align-items:center; justify-content:center; }
+.icon-bg {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+       /* default white bg behind icon */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border: 2px solid rgba(13,110,253,0.08);
+  transition: background 0.32s ease, border-color 0.32s ease, box-shadow 0.32s ease;
+  overflow: hidden;
+}
+
+/* the icon image itself (you will replace src with your images) */
+.icon-img {
+  width: 34px;
+  height: 34px;
+  display: block;
+  transition: transform 0.8s cubic-bezier(.2,.9,.2,1), opacity 0.6s ease;
+  transform-origin: center;
+}
+
+/* text */
+.step-text h4 { margin: 0 0 4px 0; font-size: 15px; color:#10273b; }
+.step-text p { margin: 0; font-size: 13px; color:#5b6b78; line-height:1.35; }
+
+/* ---- hover effect: when hovering label the icon spins then fades ---- */
+.step-card:hover .icon-img {
+  transform: rotate(360deg) scale(0.85);
+  opacity: 0;
+}
+
+/* ---- checked state: when the hidden radio is checked, style the corresponding label ----
+   Using the sibling selector: input:checked + label
+   (This requires the input to be immediately before its label in the DOM as in the HTML above)
+*/
+.step-input:checked + .step-card {
+  
+  color: #fff;
+  border-color: transparent;
+  transform: translateY(-6px) scale(1.01);
+}
+
+/* when selected, the icon-bg becomes blue and icon becomes white (invert) */
+.step-input:checked + .step-card .icon-bg {
+  background: #fff;               /* keep circle white for contrast OR change to blue if you prefer */
+  border-color: rgba(255,255,255,0.18);
+  box-shadow: 0 8px 30px rgba(11,94,215,0.08);
+}
+
+/* If you want the circle itself to become blue on selection, uncomment below and comment previous block above */
+/*
+.step-input:checked + .step-card .icon-bg {
+  background: #0d6efd;
+  border-color: #0d6efd;
+}
+*/
+
+.step-input:checked + .step-card .icon-img {
+  /* make icon visible in white (works for monochrome svgs); if icons are colored pngs replace them as needed */
+  filter: brightness(0) invert(1) saturate(0);
+  opacity: 1;
+  transform: none;
+}
+
+/* when a step is hovered AND selected, keep icon visible white */
+.step-input:checked + .step-card:hover .icon-img {
+  opacity: 1;
+  transform: none;
+}
+
+/* small responsive tweaks */
+@media (max-width: 980px) {
+  .how-inner { grid-template-columns: 1fr; gap: 28px; padding: 0 18px; }
+  .how-left { order: 2; }
+  .how-right { order: 1; }
+  .plus-deco { right: 6%; top: 2%; }
+  .hero-circle { width: 260px; height: 260px; left: 18%; }
+  .hero-img { width: 260px; }
+  .steps-grid { grid-template-columns: 1fr; }
+}
+
+.latest-articles {
+  background-color: #fff;
+}
+
+.latest-articles h2 {
+  font-weight: 700;
+  font-size: 32px;
+  color: #000;
+  position: relative;
+}
+
+.latest-articles .plus {
+  color: #2d8cff;
+  margin-left: 5px;
+}
+
+.article-card {
+  display: flex;
+  align-items: flex-start;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+}
+
+.article-img {
+  width: 35%;
+  object-fit: cover;
+  height: 100%;
+}
+
+.article-content {
+  padding: 20px;
+  width: 65%;
+}
+
+.article-meta {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.article-meta .author {
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.article-card h5 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.article-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.btn-read {
+  display: inline-block;
+  background-color: #2d8cff;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-read:hover {
+  background-color: #0056d2;
+}   
+
+.download-section {
+
+   background-image: linear-gradient(90.08deg, #0e82fd .09%, #06aed4 70.28%) !important;
+  padding: 60px 0;
+  color: #fff;
+}
+
+.download-section .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.download-section .text-area {
+  flex: 1;
+  min-width: 300px;
+}
+
+.download-section .text-area h4 {
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.download-section .text-area h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.download-section .text-area h2 span {
+  font-weight: 700;
+}
+
+.download-section .qr-and-buttons {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.download-section .qr {
+  width: 100px;
+  height: auto;
+}
+
+.download-section .store-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.download-section .store-btn {
+  width: 150px;
+  height: auto;
+}
+
+.download-section .image-area {
+  flex: 1;
+  text-align: center;
+  min-width: 300px;
+}
+
+.download-section .mobiles {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+/* Styling for the main title and the plus icon */
+.faq-section .display-6 {
+    position: relative;
+    /* For positioning the icon */
+}
+
+.faq-section .plus-icon {
+    font-size: 1.5rem; /* Size of the plus icon */
+    color: #0d6efd; /* Icon color (can be changed) */
+    position: absolute;
+    top: -5px;
+    margin-left: 5px;
+}
+
+/* Styling for the image container and overlay text */
+.image-overlay-container {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.image-overlay-container img {
+    height: auto;
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: -15px; /* Position slightly below the image */
+    left: 10%; /* Position on the bottom left side */
+    transform: translateX(0%);
+    white-space: nowrap;
+    padding: 0.5rem 1rem !important;
+    line-height: 1;
+}
+
+
+/* Custom Accordion Styling */
+.custom-accordion .accordion-item {
+    margin-bottom: 15px; /* Space between each question */
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.custom-accordion .accordion-header {
+    border-bottom: none;
+}
+
+.custom-accordion .accordion-button {
+    background-color: #fff;
+    color: #333;
+    font-weight: 600;
+    border-radius: 0.25rem !important;
+    padding: 1rem 1.25rem;
+    /* Removing focus styles for a cleaner look */
+    box-shadow: none !important;
+}
+
+.custom-accordion .accordion-button:not(.collapsed) {
+    color: #0d6efd; /* Question color when open */
+    background-color: #e9f0ff; /* Light background when open */
+}
+
+/* Customizing the default Accordion icon */
+.custom-accordion .accordion-button::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230d6efd'%3E%3Cpath fill-rule='evenodd' d='M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm1-6V5H7v4H5v2h2v2h2v-2h2V9h-2z'/%3E%3C/svg%3E");
+    transform: rotate(0deg);
+    transition: transform 0.2s ease-in-out;
+}
+
+.custom-accordion .accordion-button:not(.collapsed)::after {
+    /* Custom icon for the collapsed state (minus sign inside circle) */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230d6efd'%3E%3Cpath fill-rule='evenodd' d='M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm1-8v2H7V7h2z'/%3E%3C/svg%3E");
+}
+body {
+  background: #f8f9fa;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+.logo { height: 28px; }
+.page-title { background-color: #f8f9fa; }
+
+.doctor-avatar {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #e6e9ee;
+}
+
+/* Tabs full width */
+.profile-tabs {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e6e9ee;
+}
+
+.profile-tabs .nav-link {
+  flex: 1;
+  text-align: center;
+  border: none;
+  background: transparent;
+  color: #6b7280;
+  font-weight: 600;
+  padding: 14px 0;
+  position: relative;
+}
+
+.profile-tabs .nav-link.active {
+  color: #0d6efd;
+}
+
+.profile-tabs .nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: #0d6efd;
+  border-radius: 2px;
+}
+
+/* Timeline with blue dots + gray line */
+.timeline {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  position: relative;
+}
+
+.timeline li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 25px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #0d6efd;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px #e6e9ee;
+}
+
+.timeline li::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 18px;
+  width: 2px;
+  height: calc(100% - 10px);
+  background-color: #e6e9ee;
+}
+
+.timeline li:last-child::after {
+  display: none;
+}
+
+/* Services */
+.service-item {
+  padding: 8px;
+  color: #6b7280;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profile-tabs {
+    flex-wrap: wrap;
+  }
+}
+:root{ --blue:#007bff; --blue-dark:#0056b3; --size:56px; }
+
+body{ margin:0; font-family:Arial,Helvetica,sans-serif; background:#fafafa; }
+
+/* زر صغير مدور وبحافة دايرة حوله */
+.arrow-btn{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:var(--size);
+  height:var(--size);
+  padding:6px;
+  border-radius:50%;
+  border: 3px solid rgba(0,123,255,0.12); /* دايرة خفيفة حوالين الزر */
+  background: #fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  z-index:9999;
+  -webkit-tap-highlight-color:transparent;
+}
+
+/* تغيّر طفيف عند hover/focus */
+.arrow-btn:hover{ transform: translateY(-3px); }
+.arrow-btn:active{ transform: translateY(-1px); }
+
+/* السهم نفسه */
+#arrow-path{
+  transition: stroke 160ms linear, fill-opacity 160ms linear, transform 160ms;
+  fill-opacity: 0;
+  transform-origin: center;
+}
+
+/* لون أقوى على hover */
+.arrow-btn:hover #arrow-path{ stroke: var(--blue-dark); }
+.my-custom-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  transition: all 0.4s ease-in-out; 
+  cursor: pointer;
+  overflow: hidden;
+  height: 100%;
+}
+.my-icon-container {
+  padding: 20px 0 10px 0;
+  z-index: 1; 
+}
+.my-icon-img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.8s ease-in-out; 
+  z-index: 2; 
+}
+.my-card-text {
+  font-size: 1rem; 
+  font-weight: 600;
+  color: #333;
+  transition: color 0.4s ease-in-out;
+  text-align: center; 
+  display: block; 
+}
+.my-custom-card:hover {
+  border-color: #b0b0b0; 
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+.my-custom-card:hover .my-icon-img {
+  transform: rotateY(360deg);
+}
+.my-icon-container::before {
+  content: "";
+  position: absolute;
+  width: 55px; 
+  height: 55px;
+  border-radius: 50%;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1; 
+  transition: all 0.4s ease-in-out;
+}
+.my-custom-card:hover .my-icon-container::before {
+  opacity: 0;
+}
+.card-color-1 .my-icon-container::before { background-color: #f1f2fe; }
+.card-color-1:hover { background-color: #f1f2fe; }
+
+.card-color-2 .my-icon-container::before { background-color: #e8f9ed; }
+.card-color-2:hover { background-color: #e8f9ed; }
+
+.card-color-3 .my-icon-container::before { background-color: #e8f9fd; }
+.card-color-3:hover { background-color: #e8f9fd; }
+
+.card-color-4 .my-icon-container::before { background-color: #fee9e9; }
+.card-color-4:hover { background-color: #fee9e9; }
+
+.card-color-5 .my-icon-container::before { background-color: #eafaea; }
+.card-color-5:hover { background-color: #eafaea; }
+
+.card-color-6 .my-icon-container::before { background-color: #fef1f8; }
+.card-color-6:hover { background-color: #fef1f8; }
+
+.card-color-7 .my-icon-container::before { background-color: #fcf4ee; }
+.card-color-7:hover { background-color: #fcf4ee; }
+
+.Special-text{
+  margin-top: 10%;
+}
+.arrow-icons .btn-light {
+    background-color: #e9e9e9;
+    border: none;
+    box-shadow: none;
+}
+.arrow-icons .btn-light i {
+    color: #333;
+    font-size: 1rem;
+}
+.speciality-card {
+  border: 1px solid #eef1f6;
+  border-radius: 12px;
+}
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  background-color: #e9f2ff;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.icon-img {
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s ease;
+}
+.speciality-card:hover .icon-circle {
+  background-color: #007bff;
+}
+.speciality-card:hover .icon-img {
+  filter: brightness(0) invert(1);
+}
+.speciality-card:hover .icon-img {
+  transform: rotateY(360deg);
+}   
